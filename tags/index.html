@@ -106,18 +106,16 @@
   <meta name="description" content="刘浩的博客，一个小搬砖工的学习笔记.">
 <meta name="keywords" content="刘浩,java">
 <meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://www.bestliuhao.club/about/index.html">
+<meta property="og:title" content="标签">
+<meta property="og:url" content="http://www.bestliuhao.club/tags/index.html">
 <meta property="og:site_name" content="没有什么永垂不朽">
 <meta property="og:description" content="刘浩的博客，一个小搬砖工的学习笔记.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-18T03:32:38.639Z">
+<meta property="og:updated_time" content="2019-01-24T06:28:09.540Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
+<meta name="twitter:title" content="标签">
 <meta name="twitter:description" content="刘浩的博客，一个小搬砖工的学习笔记.">
 
-
-  
 
 
   <link rel="alternate" href="/atom.xml" title="没有什么永垂不朽" type="application/atom+xml">
@@ -125,7 +123,7 @@
 
 
 
-  <link rel="canonical" href="http://www.bestliuhao.club/about/">
+  <link rel="canonical" href="http://www.bestliuhao.club/tags/">
 
 
 
@@ -135,7 +133,7 @@
   };
 </script>
 
-  <title>about | 没有什么永垂不朽</title>
+  <title>标签 | 没有什么永垂不朽</title>
   
 
 
@@ -242,7 +240,7 @@
         
         
           
-          <li class="menu-item menu-item-about menu-item-active">
+          <li class="menu-item menu-item-about">
 
     
     
@@ -259,7 +257,7 @@
         
         
           
-          <li class="menu-item menu-item-tags">
+          <li class="menu-item menu-item-tags menu-item-active">
 
     
     
@@ -397,7 +395,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-<h2 class="post-title" itemprop="name headline">about
+<h2 class="post-title" itemprop="name headline">标签
 
 </h2>
 
@@ -417,7 +415,61 @@
       <div class="post-body">
         
         
-          
+        <div class="tag-cloud">
+          <!-- <div class="tag-cloud-title">
+              目前共计 1 个标签
+          </div> -->
+          <div class="tag-cloud-tags" id="tags">
+            <a href="/tags/mysql分页列表优化/" style="font-size: 16px; color: #fff">mysql分页列表优化</a>
+          </div>
+        </div>
+
+        <script type="text/javascript">
+          var alltags=document.getElementById('tags');
+          var tags=alltags.getElementsByTagName('a');
+
+          for (var i = tags.length - 1; i >= 0; i--) {
+            var r=Math.floor(Math.random()*75+130);
+            var g=Math.floor(Math.random()*75+100);
+            var b=Math.floor(Math.random()*75+80);
+            tags[i].style.background = "rgb("+r+","+g+","+b+")";
+          }
+        </script>
+
+        <style type="text/css">
+          div#posts.posts-expand .tag-cloud a{
+            background-color: #f5f7f1;
+            border-radius: 6px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-top: 18px;
+
+          }
+
+          .tag-cloud a{
+            background-color: #f5f7f1;
+            border-radius: 4px;
+            padding-right: 5px;
+            padding-left: 5px;
+            margin-right: 5px;
+            margin-left: 0px;
+            margin-top: 8px;
+            margin-bottom: 0px;
+
+          }
+
+          .tag-cloud a:before{
+            content: "📜";
+          }
+
+          .tag-cloud-tags{
+            text-align: left;
+            counter-reset: tags;
+          }
+        </style>
+
+
+
         
       </div>
       
