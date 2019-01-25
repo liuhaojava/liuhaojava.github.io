@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="没有什么永垂不朽">
 <meta property="og:description" content="前言　　数据的校验是交互式网站一个不可或缺的功能，前端的js校验可以涵盖大部分的校验职责，如用户名唯一性，生日格式，邮箱格式校验等等常用的校验。但是为了避免用户绕过浏览器，使用http工具直接向后端请求一些违法数据，服务端的数据校验也是必要的，可以防止脏数据落到数据库中，如果数据库中出现一个非法的邮箱格式，也会让运维人员头疼不已。我在之前保险产品研发过程中，系统对数据校验要求比较严格且追求可变性及">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-25T06:38:26.370Z">
+<meta property="og:updated_time" content="2019-01-25T06:43:58.681Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Bean Validation完成后端数据校验">
 <meta name="twitter:description" content="前言　　数据的校验是交互式网站一个不可或缺的功能，前端的js校验可以涵盖大部分的校验职责，如用户名唯一性，生日格式，邮箱格式校验等等常用的校验。但是为了避免用户绕过浏览器，使用http工具直接向后端请求一些违法数据，服务端的数据校验也是必要的，可以防止脏数据落到数据库中，如果数据库中出现一个非法的邮箱格式，也会让运维人员头疼不已。我在之前保险产品研发过程中，系统对数据校验要求比较严格且追求可变性及">
@@ -442,7 +442,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-01-25 14:38:26" itemprop="dateModified" datetime="2019-01-25T14:38:26+08:00">2019-01-25</time>
+                <time title="修改时间：2019-01-25 14:43:58" itemprop="dateModified" datetime="2019-01-25T14:43:58+08:00">2019-01-25</time>
               
             
           </span>
@@ -645,9 +645,9 @@
 <li>注:<blockquote>
 <p>所有的验证者都需要实现ConstraintValidator接口，它的接口包含一个初始化事件方法，和一个判断是否合法的方法。<br>ConstraintValidatorContext 这个上下文包含了认证中所有的信息，我们可以利用这个上下文实现获取默认错误提示信息，禁用错误提示信息，<br>改写错误提示信息等操作。 </p>
 </blockquote>
-<div style="display:none;"><h2 id="基于方法校验-controller层方法中单个参数校验"><a href="#基于方法校验-controller层方法中单个参数校验" class="headerlink" title="基于方法校验(controller层方法中单个参数校验)"></a>基于方法校验(controller层方法中单个参数校验)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Api</span>(tags = <span class="string">"validation校验demo"</span>)</span><br><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/validation"</span>)</span><br><span class="line"><span class="meta">@Validated</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoController</span> <span class="keyword">extends</span> <span class="title">BaseController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@AuthPassport</span>(value = <span class="keyword">false</span>)</span><br><span class="line">    <span class="meta">@ResponseBody</span></span><br><span class="line">    <span class="meta">@RequestMapping</span>(method = RequestMethod.GET)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">save</span><span class="params">(@NotNull(message = <span class="string">"不能为空"</span>)</span> Integer id) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"success"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</div></li>
+<div style="display:none;"><h2 id="基于方法校验-controller层方法中单个参数校验"><a href="#基于方法校验-controller层方法中单个参数校验" class="headerlink" title="基于方法校验(controller层方法中单个参数校验)"></a>基于方法校验(controller层方法中单个参数校验)</h2></div></li>
 </ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Api</span>(tags = <span class="string">"validation校验demo"</span>)</span><br><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/validation"</span>)</span><br><span class="line"><span class="meta">@Validated</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoController</span> <span class="keyword">extends</span> <span class="title">BaseController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@AuthPassport</span>(value = <span class="keyword">false</span>)</span><br><span class="line">    <span class="meta">@ResponseBody</span></span><br><span class="line">    <span class="meta">@RequestMapping</span>(method = RequestMethod.GET)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">save</span><span class="params">(@NotNull(message = <span class="string">"不能为空"</span>)</span> Integer id) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"success"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>1.为类添加@Validated注解<br>2.校验方法的返回值和入参<br></p>
 
       
@@ -682,7 +682,7 @@
   <p><span>本文标题:</span><a href="/Java/Java-Bean-Validation完成后端数据校验/">Java Bean Validation完成后端数据校验</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 刘浩 的个人博客">刘浩</a></p>
   <p><span>发布时间:</span>2019年01月24日 - 16:04</p>
-  <p><span>最后更新:</span>2019年01月25日 - 14:38</p>
+  <p><span>最后更新:</span>2019年01月25日 - 14:43</p>
   <p><span>原始链接:</span><a href="/Java/Java-Bean-Validation完成后端数据校验/" title="Java Bean Validation完成后端数据校验">http://www.bestliuhao.club/Java/Java-Bean-Validation完成后端数据校验/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.bestliuhao.club/Java/Java-Bean-Validation完成后端数据校验/" aria-label="复制成功！"></i></span>
   </p>
