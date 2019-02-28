@@ -111,10 +111,13 @@
 <meta property="og:site_name" content="没有什么永垂不朽">
 <meta property="og:description" content="JVM将类加载过程分为三个步骤：装载（Load），链接（Link）和初始化(Initialize)。链接又分为三个步骤，如下图所示:   装载：通过类加载器，查找并加载类的二进制数据 链接： 验证：确保被加载类的正确性；检查class文件是否符合JVM字节码格式的，正常情况由编译器生成的class文件肯定符合，如果不是，那需要验证通过才能下一步，安全考虑 准备：为类的静态变量分配内存，并将其">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-28T06:56:18.987Z">
+<meta property="og:image" content="http://www.bestliuhao.club/Java总结/Java-类加载机制/类加载机制1.png">
+<meta property="og:image" content="http://www.bestliuhao.club/Java总结/Java-类加载机制/类加载机制2.png">
+<meta property="og:updated_time" content="2019-02-28T06:58:23.616Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java-类加载机制">
 <meta name="twitter:description" content="JVM将类加载过程分为三个步骤：装载（Load），链接（Link）和初始化(Initialize)。链接又分为三个步骤，如下图所示:   装载：通过类加载器，查找并加载类的二进制数据 链接： 验证：确保被加载类的正确性；检查class文件是否符合JVM字节码格式的，正常情况由编译器生成的class文件肯定符合，如果不是，那需要验证通过才能下一步，安全考虑 准备：为类的静态变量分配内存，并将其">
+<meta name="twitter:image" content="http://www.bestliuhao.club/Java总结/Java-类加载机制/类加载机制1.png">
 
 
 
@@ -425,7 +428,7 @@
                 
               
 
-              <time title="创建时间：2019-02-28 14:43:57 / 修改时间：14:56:18" itemprop="dateCreated datePublished" datetime="2019-02-28T14:43:57+08:00">2019-02-28</time>
+              <time title="创建时间：2019-02-28 14:43:57 / 修改时间：14:58:23" itemprop="dateCreated datePublished" datetime="2019-02-28T14:43:57+08:00">2019-02-28</time>
             
 
             
@@ -502,7 +505,7 @@
       
 
       
-        <p>   JVM将类加载过程分为三个步骤：装载（Load），链接（Link）和初始化(Initialize)。<br>链接又分为三个步骤，如下图所示:<br> <a href="类加载机制1.png"></a></p>
+        <p>   JVM将类加载过程分为三个步骤：装载（Load），链接（Link）和初始化(Initialize)。<br>链接又分为三个步骤，如下图所示:<br> <img src="/Java总结/Java-类加载机制/类加载机制1.png" alt="类加载机制1" title="类加载机制1"></p>
 <ol>
 <li>装载：通过类加载器，查找并加载类的二进制数据</li>
 <li>链接：<ol>
@@ -524,7 +527,7 @@
 <li>扩展类加载器(Extension ClassLoader)：负责加载 JAVA_HOME\lib\ext 目录中的，或通过java.ext.dirs系统变量指定路径中的类库</li>
 <li>应用程序类加载器(Application ClassLoader)：负责加载用户路径（classpath）上的类库</li>
 <li>自定义类加载器<blockquote>
-<p>JDK中的ClassLoader<br><a href="类加载机制2.png"></a><br>通过上面可以看出findClass()的实现，直接抛出一个异常，并且方法是protected，很明显这是留给我们开发者自己去实现的，我们可以通过重写findClass方法来实现我们自己的类加载器。<br>Springboot通过@EnableAutoConfiguration注解，会根据META-INF/spring.<br>factories文件自动配置，通过@Configuration代理原来的xml配置类，通过@ComponentScan配置类扫描路径，反射生成ioc容器</p>
+<p>JDK中的ClassLoader<br><img src="/Java总结/Java-类加载机制/类加载机制2.png" alt="类加载机制2" title="类加载机制2"><br>通过上面可以看出findClass()的实现，直接抛出一个异常，并且方法是protected，很明显这是留给我们开发者自己去实现的，我们可以通过重写findClass方法来实现我们自己的类加载器。<br>Springboot通过@EnableAutoConfiguration注解，会根据META-INF/spring.<br>factories文件自动配置，通过@Configuration代理原来的xml配置类，通过@ComponentScan配置类扫描路径，反射生成ioc容器</p>
 </blockquote>
 </li>
 </ol>
@@ -561,7 +564,7 @@
   <p><span>本文标题:</span><a href="/Java总结/Java-类加载机制/">Java-类加载机制</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 刘浩 的个人博客">刘浩</a></p>
   <p><span>发布时间:</span>2019年02月28日 - 14:43</p>
-  <p><span>最后更新:</span>2019年02月28日 - 14:56</p>
+  <p><span>最后更新:</span>2019年02月28日 - 14:58</p>
   <p><span>原始链接:</span><a href="/Java总结/Java-类加载机制/" title="Java-类加载机制">http://www.bestliuhao.club/Java总结/Java-类加载机制/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.bestliuhao.club/Java总结/Java-类加载机制/" aria-label="复制成功！"></i></span>
   </p>
