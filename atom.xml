@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.bestliuhao.club/"/>
-  <updated>2019-02-28T06:39:12.420Z</updated>
+  <updated>2019-02-28T06:41:25.105Z</updated>
   <id>http://www.bestliuhao.club/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://www.bestliuhao.club/Java%E6%80%BB%E7%BB%93/Java-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
     <id>http://www.bestliuhao.club/Java总结/Java-数据类型/</id>
     <published>2019-02-28T06:25:26.000Z</published>
-    <updated>2019-02-28T06:39:12.420Z</updated>
+    <updated>2019-02-28T06:41:25.105Z</updated>
     
-    <content type="html"><![CDATA[<table><thead><tr><th style="text-align:center">类型</th><th style="text-align:center">位数</th><th style="text-align:center">字节数</th><th style="text-align:center">取值范围</th></tr></thead><tbody><tr><td style="text-align:center"></td></tr></tbody></table><p>byte|8|1|-2^7 ~ 2^7-1|<br>short|16|2|-2^15 ~ 2^15-1|<br>int|32|4|-2^31 ~ 2^31-1|<br>long|64|8|-2^63 ~ 2^63-1|<br>float|32|4|2^-149 ~ 2^128-1|<br>double|64|8|2^-1074 ~ 2^1024-1|<br>char|16|2|0  ~  2^16-1|</p><blockquote><p>boolean:        没有固定大小根据虚拟机定义</p></blockquote><p><em>Bit(位)、byte、字节、汉字的关系</em></p><pre><code>1 bit  = 1  二进制数据1 byte = 8  bit1 字母 = 1  byte = 8 bit1 汉字 = 2  byte = 16 bit</code></pre><ol><li>bit：位<br> 一个二进制数据0或1，是1bit；  </li><li>byte：字节<br>存储空间的基本计量单位，如：MySQL中定义 VARCHAR(45)  即是指 45个字节；<br>1 byte = 8 bit  </li><li>一个英文字符占一个字节；<br> 1 字母 = 1 byte = 8 bit  </li><li>一个汉字占2个字节；<br> 1 汉字 = 2 byte = 16 bit  </li><li>标点符号  <ol><li>汉字输入状态下，默认为全角输入方式；  </li><li>英文输入状态下，默认为半角输入方式；  </li><li>全角输入方式下，标点符号占2字节；  </li><li>半角输入方式下，标点符号占1字节；<br>故：汉字输入状态下的字符，占2个字节 (但不排除，自己更改了默认设置)；  <pre><code>英文输入状态下的字符，占1个字节 (但不排除，自己更改了默认设置)；</code></pre></li></ol></li></ol>]]></content>
+    <content type="html"><![CDATA[<table><thead><tr><th style="text-align:center">类型</th><th style="text-align:center">位数</th><th style="text-align:center">字节数</th><th style="text-align:center">取值范围</th></tr></thead><tbody><tr><td style="text-align:center">byte</td><td style="text-align:center">8</td><td style="text-align:center">1</td><td style="text-align:center">-2^7 ~ 2^7-1</td></tr><tr><td style="text-align:center">short</td><td style="text-align:center">16</td><td style="text-align:center">2</td><td style="text-align:center">-2^15 ~ 2^15-1</td></tr><tr><td style="text-align:center">int</td><td style="text-align:center">32</td><td style="text-align:center">4</td><td style="text-align:center">-2^31 ~ 2^31-1</td></tr><tr><td style="text-align:center">long</td><td style="text-align:center">64</td><td style="text-align:center">8</td><td style="text-align:center">-2^63 ~ 2^63-1</td></tr><tr><td style="text-align:center">float</td><td style="text-align:center">32</td><td style="text-align:center">4</td><td style="text-align:center">2^-149 ~ 2^128-1</td></tr><tr><td style="text-align:center">double</td><td style="text-align:center">64</td><td style="text-align:center">8</td><td style="text-align:center">2^-1074 ~ 2^1024-1</td></tr><tr><td style="text-align:center">char</td><td style="text-align:center">16</td><td style="text-align:center">2</td><td style="text-align:center">0  ~  2^16-1</td></tr></tbody></table><blockquote><p>boolean:        没有固定大小根据虚拟机定义</p></blockquote><p><em>Bit(位)、byte、字节、汉字的关系</em></p><pre><code>1 bit  = 1  二进制数据1 byte = 8  bit1 字母 = 1  byte = 8 bit1 汉字 = 2  byte = 16 bit</code></pre><ol><li>bit：位<br> 一个二进制数据0或1，是1bit；  </li><li>byte：字节<br>存储空间的基本计量单位，如：MySQL中定义 VARCHAR(45)  即是指 45个字节；<br>1 byte = 8 bit  </li><li>一个英文字符占一个字节；<br> 1 字母 = 1 byte = 8 bit  </li><li>一个汉字占2个字节；<br> 1 汉字 = 2 byte = 16 bit  </li><li>标点符号  <ol><li>汉字输入状态下，默认为全角输入方式；  </li><li>英文输入状态下，默认为半角输入方式；  </li><li>全角输入方式下，标点符号占2字节；  </li><li>半角输入方式下，标点符号占1字节；<br>故：汉字输入状态下的字符，占2个字节 (但不排除，自己更改了默认设置)；  <pre><code>英文输入状态下的字符，占1个字节 (但不排除，自己更改了默认设置)；</code></pre></li></ol></li></ol>]]></content>
     
     <summary type="html">
     
