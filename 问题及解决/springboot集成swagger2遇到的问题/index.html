@@ -111,12 +111,12 @@
 <meta property="og:site_name" content="没有什么永垂不朽">
 <meta property="og:description" content="springboot项目集成swagger2的问题项目是从SSM项目整合过来的，swagger原本就有的，没有问题。整合到springboot项目时候，http://ip:port/swagger-ui.html会报错。swagger配置如下：   @Configuration @EnableSwagger2 public class SwaggerConfig {      @Bean">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://www.bestliuhao.club/问题及解决/springboot集成swagger2遇到的问题/swagger1.jpg">
-<meta property="og:updated_time" content="2019-05-13T09:36:59.000Z">
+<meta property="og:image" content="http://www.bestliuhao.club/问题及解决/springboot集成swagger2遇到的问题/swagger.jpg">
+<meta property="og:updated_time" content="2019-05-14T06:44:52.320Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="springboot集成swagger2遇到的问题">
 <meta name="twitter:description" content="springboot项目集成swagger2的问题项目是从SSM项目整合过来的，swagger原本就有的，没有问题。整合到springboot项目时候，http://ip:port/swagger-ui.html会报错。swagger配置如下：   @Configuration @EnableSwagger2 public class SwaggerConfig {      @Bean">
-<meta name="twitter:image" content="http://www.bestliuhao.club/问题及解决/springboot集成swagger2遇到的问题/swagger1.jpg">
+<meta name="twitter:image" content="http://www.bestliuhao.club/问题及解决/springboot集成swagger2遇到的问题/swagger.jpg">
 
 
 
@@ -427,12 +427,24 @@
                 
               
 
-              <time title="创建时间：2019-05-13 16:41:28 / 修改时间：17:36:59" itemprop="dateCreated datePublished" datetime="2019-05-13T16:41:28+08:00">2019-05-13</time>
+              <time title="创建时间：2019-05-13 16:41:28" itemprop="dateCreated datePublished" datetime="2019-05-13T16:41:28+08:00">2019-05-13</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-14 14:44:52" itemprop="dateModified" datetime="2019-05-14T14:44:52+08:00">2019-05-14</time>
               
             
           </span>
@@ -592,7 +604,7 @@
     }
 }
 </code></pre>
-<p>如上配置访问<a href="http://ip:port/swagger-ui.html会报错" target="_blank" rel="noopener">http://ip:port/swagger-ui.html会报错</a><br><img src="/问题及解决/springboot集成swagger2遇到的问题/swagger1.jpg" alt=""><br>访问<a href="http://ip:port/v2/api-docs正常" target="_blank" rel="noopener">http://ip:port/v2/api-docs正常</a><br>猜想应该是没有找到静态资源的问题，但是拦截器配置那里是加了的</p>
+<p>如上配置访问<a href="http://ip:port/swagger-ui.html会报错" target="_blank" rel="noopener">http://ip:port/swagger-ui.html会报错</a><br><img src="/问题及解决/springboot集成swagger2遇到的问题/swagger.jpg" alt=""><br>访问<a href="http://ip:port/v2/api-docs正常" target="_blank" rel="noopener">http://ip:port/v2/api-docs正常</a><br>猜想应该是没有找到静态资源的问题，但是拦截器配置那里是加了的</p>
 <pre><code class="java"><span class="meta">@Override</span>
     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addResourceHandlers</span><span class="params">(ResourceHandlerRegistry registry)</span> </span>{
         registry.addResourceHandler(<span class="string">"/**"</span>).addResourceLocations(<span class="string">"/"</span>);
@@ -730,7 +742,7 @@
   <p><span>本文标题:</span><a href="/问题及解决/springboot集成swagger2遇到的问题/">springboot集成swagger2遇到的问题</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 刘浩 的个人博客">刘浩</a></p>
   <p><span>发布时间:</span>2019年05月13日 - 16:41</p>
-  <p><span>最后更新:</span>2019年05月13日 - 17:36</p>
+  <p><span>最后更新:</span>2019年05月14日 - 14:44</p>
   <p><span>原始链接:</span><a href="/问题及解决/springboot集成swagger2遇到的问题/" title="springboot集成swagger2遇到的问题">http://www.bestliuhao.club/问题及解决/springboot集成swagger2遇到的问题/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.bestliuhao.club/问题及解决/springboot集成swagger2遇到的问题/" aria-label="复制成功！"></i></span>
   </p>
