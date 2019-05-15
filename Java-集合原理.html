@@ -28,8 +28,8 @@
   
     
     
-  <script src="/blog/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link rel="stylesheet" href="/blog/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
 
 
 
@@ -53,21 +53,21 @@
 
 
 
-<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
 
-<link rel="stylesheet" href="/blog/css/main.css?v=6.7.0">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png?v=6.7.0">
+<link rel="stylesheet" href="/css/main.css?v=6.7.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon.ico?v=6.7.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=6.7.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon.ico?v=6.7.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=6.7.0">
 
 
-  <link rel="mask-icon" href="/blog/images/logo.svg?v=6.7.0" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=6.7.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.7.0" color="#222">
 
 
 
@@ -78,7 +78,7 @@
 <script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/blog/',
+    root: '/',
     scheme: 'Gemini',
     version: '6.7.0',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
@@ -107,26 +107,26 @@
 <meta name="keywords" content="Java总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java-集合原理">
-<meta property="og:url" content="https://liuhaojava.gitee.io/blog/Java-集合原理.html">
+<meta property="og:url" content="https://www.bestliuhao.club/Java-集合原理.html">
 <meta property="og:site_name" content="没有什么永垂不朽">
 <meta property="og:description" content="数组中内存是连续的，只需对 [基地址+元素大小*k] 就能找到第k个元素的地址，可以快速找到特定的值，但是想在有序数组中插入一个新的数据项，就必须首先找出新数据项插入的位置，然后将比新数据项大的数据项向后移动一位，来给新的数据项腾出空间，删除同理，这样移动很费时。显而易见，如果要做很多的插入和删除操作和删除操作，就不该选用有序数组。另一方面，链表中可以快速添加和删除某个数据项，但是在链表中查找数据">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://liuhaojava.gitee.io/blog/Java-集合原理/Java-集合原理1.png">
-<meta property="og:image" content="https://liuhaojava.gitee.io/blog/Java-集合原理/Java-集合原理2.png">
+<meta property="og:image" content="https://www.bestliuhao.club/Java-集合原理/Java-集合原理1.png">
+<meta property="og:image" content="https://www.bestliuhao.club/Java-集合原理/Java-集合原理2.png">
 <meta property="og:updated_time" content="2019-05-13T09:36:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java-集合原理">
 <meta name="twitter:description" content="数组中内存是连续的，只需对 [基地址+元素大小*k] 就能找到第k个元素的地址，可以快速找到特定的值，但是想在有序数组中插入一个新的数据项，就必须首先找出新数据项插入的位置，然后将比新数据项大的数据项向后移动一位，来给新的数据项腾出空间，删除同理，这样移动很费时。显而易见，如果要做很多的插入和删除操作和删除操作，就不该选用有序数组。另一方面，链表中可以快速添加和删除某个数据项，但是在链表中查找数据">
-<meta name="twitter:image" content="https://liuhaojava.gitee.io/blog/Java-集合原理/Java-集合原理1.png">
+<meta name="twitter:image" content="https://www.bestliuhao.club/Java-集合原理/Java-集合原理1.png">
 
 
 
-  <link rel="alternate" href="/blog/atom.xml" title="没有什么永垂不朽" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="没有什么永垂不朽" type="application/atom+xml">
 
 
 
 
-  <link rel="canonical" href="https://liuhaojava.gitee.io/blog/Java-集合原理.html">
+  <link rel="canonical" href="https://www.bestliuhao.club/Java-集合原理.html">
 
 
 
@@ -193,7 +193,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/blog/" class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">没有什么永垂不朽</span>
         <span class="logo-line-after"><i></i></span>
@@ -236,7 +236,7 @@
 
     
 
-    <a href="/blog/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
   </li>
         
@@ -253,7 +253,7 @@
 
     
 
-    <a href="/blog/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
 
   </li>
         
@@ -270,7 +270,7 @@
 
     
 
-    <a href="/blog/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
 
   </li>
         
@@ -287,7 +287,7 @@
 
     
 
-    <a href="/blog/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
 
   </li>
         
@@ -304,7 +304,7 @@
 
     
 
-    <a href="/blog/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
   </li>
 
@@ -385,12 +385,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liuhaojava.gitee.io/blog/blog/Java-集合原理.html">
+    <link itemprop="mainEntityOfPage" href="https://www.bestliuhao.club/Java-集合原理.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘浩">
       <meta itemprop="description" content="刘浩的博客，一个小搬砖工的学习笔记.">
-      <meta itemprop="image" content="/blog/images/user.jpg">
+      <meta itemprop="image" content="/images/user.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -462,7 +462,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/blog/categories/Java总结/" itemprop="url" rel="index"><span itemprop="name">Java总结</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Java总结/" itemprop="url" rel="index"><span itemprop="name">Java总结</span></a></span>
 
                 
                 
@@ -480,8 +480,8 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
             
-                <a href="/blog/Java-集合原理.html#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/blog/Java-集合原理.html" itemprop="commentCount"></span>
+                <a href="/Java-集合原理.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Java-集合原理.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -518,7 +518,7 @@
 
       
         <p>数组中内存是连续的，只需对 [基地址+元素大小*k] 就能找到第k个元素的地址，可以快速找到特定的值，但是想在有序数组中插入一个新的数据项，<br>就必须首先找出新数据项插入的位置，然后将比新数据项大的数据项向后移动一位，来给新的数据项腾出空间，删除同理，这样移动很费时。显而易见，<br>如果要做很多的插入和删除操作和删除操作，就不该选用有序数组。<br>另一方面，链表中可以快速添加和删除某个数据项，但是在链表中查找数据项可不容易，必须从头开始访问链表的每一个数据项，直到找到该数据项为止，<br>这个过程很慢。  </p>
-<p> <strong>HashMap</strong><br>在JDK1.8之前，HashMap采用数组+链表实现，即使用链表处理冲突，同一hash值的链表都存储在一个链表里。但是当位于一个桶中的元素较多，<br>即hash值相等的元素较多时，通过key值依次查找的效率较低<br><img src="/blog/Java-集合原理/Java-集合原理1.png" alt=""><br>而JDK1.8中，HashMap采用数组+链表+红黑树实现，当链表长度超过阈值（8）时，将链表转换为红黑树，这样大大减少了查找时间<br><img src="/blog/Java-集合原理/Java-集合原理2.png" alt=""><br>transient int size：表示当前HashMap包含的键值对数量<br>transient int modCount：表示当前HashMap修改次数<br>int threshold：表示当前HashMap能够承受的最多的键值对数量，一旦超过这个数量HashMap就会进行扩容<br>threshold = loadFactor <em>容量，12=0.75</em>16<br>final float loadFactor：负载因子，用于扩容<br>static final int DEFAULT_INITIAL_CAPACITY = 1 &lt;&lt; 4(表示1，左移4位，变成10000，也就是16.)：默认的初始容量<br>static final float DEFAULT_LOAD_FACTOR = 0.75f：默认的负载因子<br>static final int MIN_TREEIFY_CAPACITY = 64：当哈希表中的容量大于这个值时，表中的桶才能进行树形化，否则桶内元素太多时会扩容，而不是树形化，为了避免进行扩容、树形化选择的冲突，这个值不能小于 4 * TREEIFY_THRESHOLD<br>static final int TREEIFY_THRESHOLD = 8：当桶中元素个数超过这个值时需要使用红黑树节点替换链表节点<br>static final int UNTREEIFY_THRESHOLD = 6：当扩容时，桶中元素个数小于这个值就会把树形的桶元素 还原（切分）为链表结构  </p>
+<p> <strong>HashMap</strong><br>在JDK1.8之前，HashMap采用数组+链表实现，即使用链表处理冲突，同一hash值的链表都存储在一个链表里。但是当位于一个桶中的元素较多，<br>即hash值相等的元素较多时，通过key值依次查找的效率较低<br><img src="/Java-集合原理/Java-集合原理1.png" alt=""><br>而JDK1.8中，HashMap采用数组+链表+红黑树实现，当链表长度超过阈值（8）时，将链表转换为红黑树，这样大大减少了查找时间<br><img src="/Java-集合原理/Java-集合原理2.png" alt=""><br>transient int size：表示当前HashMap包含的键值对数量<br>transient int modCount：表示当前HashMap修改次数<br>int threshold：表示当前HashMap能够承受的最多的键值对数量，一旦超过这个数量HashMap就会进行扩容<br>threshold = loadFactor <em>容量，12=0.75</em>16<br>final float loadFactor：负载因子，用于扩容<br>static final int DEFAULT_INITIAL_CAPACITY = 1 &lt;&lt; 4(表示1，左移4位，变成10000，也就是16.)：默认的初始容量<br>static final float DEFAULT_LOAD_FACTOR = 0.75f：默认的负载因子<br>static final int MIN_TREEIFY_CAPACITY = 64：当哈希表中的容量大于这个值时，表中的桶才能进行树形化，否则桶内元素太多时会扩容，而不是树形化，为了避免进行扩容、树形化选择的冲突，这个值不能小于 4 * TREEIFY_THRESHOLD<br>static final int TREEIFY_THRESHOLD = 8：当桶中元素个数超过这个值时需要使用红黑树节点替换链表节点<br>static final int UNTREEIFY_THRESHOLD = 6：当扩容时，桶中元素个数小于这个值就会把树形的桶元素 还原（切分）为链表结构  </p>
 <ol>
 <li>为什么hashMap的容量一定是2的次幂?<br>首先hashmap构造函数，默认容量是16，如果是指定容量大小，那么最终会调用tableSizeFor(initialCapacity)方法是用来计算初始容量的,<br>这个方法会返回一个比给定容量大的最小2的次幂的数，所以一定是2的次幂，举个例子:如果你给了9，比9大的最小2的次幂是16(2^4)；如果你给个27，<br>比27大的最小的2的次幂是32(2^5)，为什么一定要2的次幂呢？因为<br>key值落点的计算方式： [(n - 1) &amp; hash] ，与“取余”是等价的算法<br>第一种方式计算出的key值落点越平均，hash冲突的可能性越小。<br>当容量大小是2的次幂时，(%和&amp;)2种算法，hash冲突可能性是一样的，但是&amp;效率高<br>当容量不是2的次幂时， &amp;这种算法，key值落点更平均，hash冲突可能性更小，同时&amp;效率也高</li>
 <li>负载因子为什么会影响HashMap性能，为什么默认是0.75f<br>因为负载因子越大则HashMap的装填程度越高，也就是能容纳更多的元素，元素多了，链表大了，所以此时索引效率就会降低。反之，负载因子越小则链<br>表中的数据量就越稀疏，此时会对空间造成烂费，但是此时索引效率高</li>
@@ -554,12 +554,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/blog/Java-集合原理.html">Java-集合原理</a></p>
+  <p><span>本文标题:</span><a href="/Java-集合原理.html">Java-集合原理</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 刘浩 的个人博客">刘浩</a></p>
   <p><span>发布时间:</span>2019年02月28日 - 15:59</p>
   <p><span>最后更新:</span>2019年05月13日 - 17:36</p>
-  <p><span>原始链接:</span><a href="/blog/Java-集合原理.html" title="Java-集合原理">https://liuhaojava.gitee.io/blog/Java-集合原理.html</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://liuhaojava.gitee.io/blog/Java-集合原理.html" aria-label="复制成功！"></i></span>
+  <p><span>原始链接:</span><a href="/Java-集合原理.html" title="Java-集合原理">https://www.bestliuhao.club/Java-集合原理.html</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.bestliuhao.club/Java-集合原理.html" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
 </div>
@@ -597,14 +597,14 @@ $(".fa-clipboard").click(function(){
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/blog/images/微信.png" alt="刘浩 微信支付">
+        <img id="wechat_qr" src="/images/微信.png" alt="刘浩 微信支付">
         <p>微信支付</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/blog/images/支付宝.jpg" alt="刘浩 支付宝">
+        <img id="alipay_qr" src="/images/支付宝.jpg" alt="刘浩 支付宝">
         <p>支付宝</p>
       </div>
     
@@ -623,7 +623,7 @@ $(".fa-clipboard").click(function(){
       
         <div class="post-tags">
           
-            <a href="/blog/tags/Java总结/" rel="tag"><i class="fa fa-tag"></i> Java总结</a>
+            <a href="/tags/Java总结/" rel="tag"><i class="fa fa-tag"></i> Java总结</a>
           
         </div>
       
@@ -636,7 +636,7 @@ $(".fa-clipboard").click(function(){
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/Java-代理.html" rel="next" title="Java-代理">
+              <a href="/Java-代理.html" rel="next" title="Java-代理">
                 <i class="fa fa-chevron-left"></i> Java-代理
               </a>
             
@@ -646,7 +646,7 @@ $(".fa-clipboard").click(function(){
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/Java-Mysql索引原理.html" rel="prev" title="Java-Mysql索引原理">
+              <a href="/Java-Mysql索引原理.html" rel="prev" title="Java-Mysql索引原理">
                 Java-Mysql索引原理 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -702,7 +702,7 @@ $(".fa-clipboard").click(function(){
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/blog/images/user.jpg" alt="刘浩">
+              <img class="site-author-image" itemprop="image" src="/images/user.jpg" alt="刘浩">
             
               <p class="site-author-name" itemprop="name">刘浩</p>
               <p class="site-description motion-element" itemprop="description">刘浩的博客，一个小搬砖工的学习笔记.</p>
@@ -713,9 +713,9 @@ $(".fa-clipboard").click(function(){
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/blog/archives/">
+                  <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -725,7 +725,7 @@ $(".fa-clipboard").click(function(){
                 
                 
                 <div class="site-state-item site-state-categories">
-                  <a href="/blog/categories/index.html">
+                  <a href="/categories/index.html">
                     
                     
                       
@@ -746,7 +746,7 @@ $(".fa-clipboard").click(function(){
                 
                 
                 <div class="site-state-item site-state-tags">
-                  <a href="/blog/tags/index.html">
+                  <a href="/tags/index.html">
                     
                     
                       
@@ -767,7 +767,7 @@ $(".fa-clipboard").click(function(){
 
           
             <div class="feed-link motion-element">
-              <a href="/blog/atom.xml" rel="alternate">
+              <a href="/atom.xml" rel="alternate">
                 <i class="fa fa-rss"></i>
                 RSS
               </a>
@@ -796,7 +796,7 @@ $(".fa-clipboard").click(function(){
                   
                     
                   
-                  <a href="/blog/刘浩:liuhjavax@163.com" title="E-Mail &rarr; 刘浩:liuhjavax@163.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  <a href="/刘浩:liuhjavax@163.com" title="E-Mail &rarr; 刘浩:liuhjavax@163.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -820,7 +820,7 @@ $(".fa-clipboard").click(function(){
               
               
               
-              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/blog/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
              </div>
           
 
@@ -963,45 +963,45 @@ $(".fa-clipboard").click(function(){
 
 
   
-  <script src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  <script src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  <script src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
-  
-
-
-  <script src="/blog/js/src/utils.js?v=6.7.0"></script>
-
-  <script src="/blog/js/src/motion.js?v=6.7.0"></script>
-
-
-
-  
-  
-
-
-  <script src="/blog/js/src/affix.js?v=6.7.0"></script>
-
-  <script src="/blog/js/src/schemes/pisces.js?v=6.7.0"></script>
-
-
-
-
-  
-  <script src="/blog/js/src/scrollspy.js?v=6.7.0"></script>
-<script src="/blog/js/src/post-details.js?v=6.7.0"></script>
-
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
 
   
 
 
-  <script src="/blog/js/src/bootstrap.js?v=6.7.0"></script>
+  <script src="/js/src/utils.js?v=6.7.0"></script>
+
+  <script src="/js/src/motion.js?v=6.7.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.7.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.7.0"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=6.7.0"></script>
+<script src="/js/src/post-details.js?v=6.7.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
 
 
 
@@ -1053,7 +1053,7 @@ $(".fa-clipboard").click(function(){
     } else if (/json$/i.test(search_path)) {
       isXml = false;
     }
-    var path = "/blog/" + search_path;
+    var path = "/" + search_path;
     // monitor main search box;
 
     var onPopupClose = function (e) {
