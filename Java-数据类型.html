@@ -103,21 +103,18 @@
 
 
 
-  <meta name="description" content="数组中内存是连续的，只需对 [基地址+元素大小*k] 就能找到第k个元素的地址，可以快速找到特定的值，但是想在有序数组中插入一个新的数据项，就必须首先找出新数据项插入的位置，然后将比新数据项大的数据项向后移动一位，来给新的数据项腾出空间，删除同理，这样移动很费时。显而易见，如果要做很多的插入和删除操作和删除操作，就不该选用有序数组。另一方面，链表中可以快速添加和删除某个数据项，但是在链表中查找数据">
+  <meta name="description" content="类型 位数 字节数 取值范围     byte 8 1 -2^7 ~ 2^7-1   short 16 2 -2^15 ~ 2^15-1   int 32 4 -2^31 ~ 2^31-1   long 64 8 -2^63 ~ 2^63-1   float 32 4 2^-149 ~ 2^128-1   double 64 8 2^-1074 ~ 2^1024-1   char 16 2">
 <meta name="keywords" content="Java总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java-集合原理">
-<meta property="og:url" content="https://www.bestliuhao.club/Java总结/Java-集合原理/index.html">
+<meta property="og:title" content="Java-数据类型">
+<meta property="og:url" content="https://www.bestliuhao.club/Java-数据类型.html">
 <meta property="og:site_name" content="没有什么永垂不朽">
-<meta property="og:description" content="数组中内存是连续的，只需对 [基地址+元素大小*k] 就能找到第k个元素的地址，可以快速找到特定的值，但是想在有序数组中插入一个新的数据项，就必须首先找出新数据项插入的位置，然后将比新数据项大的数据项向后移动一位，来给新的数据项腾出空间，删除同理，这样移动很费时。显而易见，如果要做很多的插入和删除操作和删除操作，就不该选用有序数组。另一方面，链表中可以快速添加和删除某个数据项，但是在链表中查找数据">
+<meta property="og:description" content="类型 位数 字节数 取值范围     byte 8 1 -2^7 ~ 2^7-1   short 16 2 -2^15 ~ 2^15-1   int 32 4 -2^31 ~ 2^31-1   long 64 8 -2^63 ~ 2^63-1   float 32 4 2^-149 ~ 2^128-1   double 64 8 2^-1074 ~ 2^1024-1   char 16 2">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://www.bestliuhao.club/Java总结/Java-集合原理/Java-集合原理1.png">
-<meta property="og:image" content="https://www.bestliuhao.club/Java总结/Java-集合原理/Java-集合原理2.png">
 <meta property="og:updated_time" content="2019-05-13T09:36:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java-集合原理">
-<meta name="twitter:description" content="数组中内存是连续的，只需对 [基地址+元素大小*k] 就能找到第k个元素的地址，可以快速找到特定的值，但是想在有序数组中插入一个新的数据项，就必须首先找出新数据项插入的位置，然后将比新数据项大的数据项向后移动一位，来给新的数据项腾出空间，删除同理，这样移动很费时。显而易见，如果要做很多的插入和删除操作和删除操作，就不该选用有序数组。另一方面，链表中可以快速添加和删除某个数据项，但是在链表中查找数据">
-<meta name="twitter:image" content="https://www.bestliuhao.club/Java总结/Java-集合原理/Java-集合原理1.png">
+<meta name="twitter:title" content="Java-数据类型">
+<meta name="twitter:description" content="类型 位数 字节数 取值范围     byte 8 1 -2^7 ~ 2^7-1   short 16 2 -2^15 ~ 2^15-1   int 32 4 -2^31 ~ 2^31-1   long 64 8 -2^63 ~ 2^63-1   float 32 4 2^-149 ~ 2^128-1   double 64 8 2^-1074 ~ 2^1024-1   char 16 2">
 
 
 
@@ -126,7 +123,7 @@
 
 
 
-  <link rel="canonical" href="https://www.bestliuhao.club/Java总结/Java-集合原理/">
+  <link rel="canonical" href="https://www.bestliuhao.club/Java-数据类型.html">
 
 
 
@@ -136,7 +133,7 @@
   };
 </script>
 
-  <title>Java-集合原理 | 没有什么永垂不朽</title>
+  <title>Java-数据类型 | 没有什么永垂不朽</title>
   
 
 
@@ -385,7 +382,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.bestliuhao.club/Java总结/Java-集合原理/">
+    <link itemprop="mainEntityOfPage" href="https://www.bestliuhao.club/Java-数据类型.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘浩">
@@ -402,7 +399,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java-集合原理
+          <h2 class="post-title" itemprop="name headline">Java-数据类型
 
               
             
@@ -428,7 +425,7 @@
                 
               
 
-              <time title="创建时间：2019-02-28 15:59:51" itemprop="dateCreated datePublished" datetime="2019-02-28T15:59:51+08:00">2019-02-28</time>
+              <time title="创建时间：2019-02-28 14:25:26" itemprop="dateCreated datePublished" datetime="2019-02-28T14:25:26+08:00">2019-02-28</time>
             
 
             
@@ -480,8 +477,8 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
             
-                <a href="/Java总结/Java-集合原理/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Java总结/Java-集合原理/" itemprop="commentCount"></span>
+                <a href="/Java-数据类型.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Java-数据类型.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -517,13 +514,82 @@
       
 
       
-        <p>数组中内存是连续的，只需对 [基地址+元素大小*k] 就能找到第k个元素的地址，可以快速找到特定的值，但是想在有序数组中插入一个新的数据项，<br>就必须首先找出新数据项插入的位置，然后将比新数据项大的数据项向后移动一位，来给新的数据项腾出空间，删除同理，这样移动很费时。显而易见，<br>如果要做很多的插入和删除操作和删除操作，就不该选用有序数组。<br>另一方面，链表中可以快速添加和删除某个数据项，但是在链表中查找数据项可不容易，必须从头开始访问链表的每一个数据项，直到找到该数据项为止，<br>这个过程很慢。  </p>
-<p> <strong>HashMap</strong><br>在JDK1.8之前，HashMap采用数组+链表实现，即使用链表处理冲突，同一hash值的链表都存储在一个链表里。但是当位于一个桶中的元素较多，<br>即hash值相等的元素较多时，通过key值依次查找的效率较低<br><img src="/Java总结/Java-集合原理/Java-集合原理1.png" alt=""><br>而JDK1.8中，HashMap采用数组+链表+红黑树实现，当链表长度超过阈值（8）时，将链表转换为红黑树，这样大大减少了查找时间<br><img src="/Java总结/Java-集合原理/Java-集合原理2.png" alt=""><br>transient int size：表示当前HashMap包含的键值对数量<br>transient int modCount：表示当前HashMap修改次数<br>int threshold：表示当前HashMap能够承受的最多的键值对数量，一旦超过这个数量HashMap就会进行扩容<br>threshold = loadFactor <em>容量，12=0.75</em>16<br>final float loadFactor：负载因子，用于扩容<br>static final int DEFAULT_INITIAL_CAPACITY = 1 &lt;&lt; 4(表示1，左移4位，变成10000，也就是16.)：默认的初始容量<br>static final float DEFAULT_LOAD_FACTOR = 0.75f：默认的负载因子<br>static final int MIN_TREEIFY_CAPACITY = 64：当哈希表中的容量大于这个值时，表中的桶才能进行树形化，否则桶内元素太多时会扩容，而不是树形化，为了避免进行扩容、树形化选择的冲突，这个值不能小于 4 * TREEIFY_THRESHOLD<br>static final int TREEIFY_THRESHOLD = 8：当桶中元素个数超过这个值时需要使用红黑树节点替换链表节点<br>static final int UNTREEIFY_THRESHOLD = 6：当扩容时，桶中元素个数小于这个值就会把树形的桶元素 还原（切分）为链表结构  </p>
-<ol>
-<li>为什么hashMap的容量一定是2的次幂?<br>首先hashmap构造函数，默认容量是16，如果是指定容量大小，那么最终会调用tableSizeFor(initialCapacity)方法是用来计算初始容量的,<br>这个方法会返回一个比给定容量大的最小2的次幂的数，所以一定是2的次幂，举个例子:如果你给了9，比9大的最小2的次幂是16(2^4)；如果你给个27，<br>比27大的最小的2的次幂是32(2^5)，为什么一定要2的次幂呢？因为<br>key值落点的计算方式： [(n - 1) &amp; hash] ，与“取余”是等价的算法<br>第一种方式计算出的key值落点越平均，hash冲突的可能性越小。<br>当容量大小是2的次幂时，(%和&amp;)2种算法，hash冲突可能性是一样的，但是&amp;效率高<br>当容量不是2的次幂时， &amp;这种算法，key值落点更平均，hash冲突可能性更小，同时&amp;效率也高</li>
-<li>负载因子为什么会影响HashMap性能，为什么默认是0.75f<br>因为负载因子越大则HashMap的装填程度越高，也就是能容纳更多的元素，元素多了，链表大了，所以此时索引效率就会降低。反之，负载因子越小则链<br>表中的数据量就越稀疏，此时会对空间造成烂费，但是此时索引效率高</li>
+        <table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">位数</th>
+<th style="text-align:center">字节数</th>
+<th style="text-align:center">取值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">byte</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-2^7 ~ 2^7-1</td>
+</tr>
+<tr>
+<td style="text-align:center">short</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">-2^15 ~ 2^15-1</td>
+</tr>
+<tr>
+<td style="text-align:center">int</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">-2^31 ~ 2^31-1</td>
+</tr>
+<tr>
+<td style="text-align:center">long</td>
+<td style="text-align:center">64</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">-2^63 ~ 2^63-1</td>
+</tr>
+<tr>
+<td style="text-align:center">float</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2^-149 ~ 2^128-1</td>
+</tr>
+<tr>
+<td style="text-align:center">double</td>
+<td style="text-align:center">64</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">2^-1074 ~ 2^1024-1</td>
+</tr>
+<tr>
+<td style="text-align:center">char</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0  ~  2^16-1</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>boolean:        没有固定大小根据虚拟机定义</p>
+</blockquote>
+<p><em>Bit(位)、byte、字节、汉字的关系</em></p>
+<pre><code>1 bit  = 1  二进制数据
+1 byte = 8  bit
+1 字母 = 1  byte = 8 bit
+1 汉字 = 2  byte = 16 bit
+</code></pre><ol>
+<li>bit：位<br> 一个二进制数据0或1，是1bit；  </li>
+<li>byte：字节<br>存储空间的基本计量单位，如：MySQL中定义 VARCHAR(45)  即是指 45个字节；<br>1 byte = 8 bit  </li>
+<li>一个英文字符占一个字节；<br> 1 字母 = 1 byte = 8 bit  </li>
+<li>一个汉字占2个字节；<br> 1 汉字 = 2 byte = 16 bit  </li>
+<li>标点符号  <ol>
+<li>汉字输入状态下，默认为全角输入方式；  </li>
+<li>英文输入状态下，默认为半角输入方式；  </li>
+<li>全角输入方式下，标点符号占2字节；  </li>
+<li>半角输入方式下，标点符号占1字节；<br>故：汉字输入状态下的字符，占2个字节 (但不排除，自己更改了默认设置)；  <pre><code>英文输入状态下的字符，占1个字节 (但不排除，自己更改了默认设置)；
+</code></pre></li>
 </ol>
-<p>参考文献：<br><a href="https://blog.csdn.net/qq_25868207/article/details/55259978" target="_blank" rel="noopener">https://blog.csdn.net/qq_25868207/article/details/55259978</a><br><a href="https://blog.csdn.net/u010890358/article/details/80496144" target="_blank" rel="noopener">https://blog.csdn.net/u010890358/article/details/80496144</a> hashmap扩容<br><a href="https://blog.csdn.net/lizhongkaide/article/details/50595719" target="_blank" rel="noopener">https://blog.csdn.net/lizhongkaide/article/details/50595719</a> hashmap原理<br><a href="https://blog.csdn.net/qq_36178899/article/details/84333151" target="_blank" rel="noopener">https://blog.csdn.net/qq_36178899/article/details/84333151</a> hashmap原理<br><a href="https://segmentfault.com/a/1190000012926722" target="_blank" rel="noopener">https://segmentfault.com/a/1190000012926722</a> hashmap原理<br><a href="https://segmentfault.com/a/1190000017509668" target="_blank" rel="noopener">https://segmentfault.com/a/1190000017509668</a> hashmap落点均匀<br><a href="https://blog.csdn.net/u010841296/article/details/82832166" target="_blank" rel="noopener">https://blog.csdn.net/u010841296/article/details/82832166</a> hashmap容量大小<br><a href="http://www.360linker.com/sj/643.jhtml" target="_blank" rel="noopener">http://www.360linker.com/sj/643.jhtml</a> hashmap容量大小  </p>
+</li>
+</ol>
 
       
     </div>
@@ -554,12 +620,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/Java总结/Java-集合原理/">Java-集合原理</a></p>
+  <p><span>本文标题:</span><a href="/Java-数据类型.html">Java-数据类型</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 刘浩 的个人博客">刘浩</a></p>
-  <p><span>发布时间:</span>2019年02月28日 - 15:59</p>
+  <p><span>发布时间:</span>2019年02月28日 - 14:25</p>
   <p><span>最后更新:</span>2019年05月13日 - 17:36</p>
-  <p><span>原始链接:</span><a href="/Java总结/Java-集合原理/" title="Java-集合原理">https://www.bestliuhao.club/Java总结/Java-集合原理/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.bestliuhao.club/Java总结/Java-集合原理/" aria-label="复制成功！"></i></span>
+  <p><span>原始链接:</span><a href="/Java-数据类型.html" title="Java-数据类型">https://www.bestliuhao.club/Java-数据类型.html</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.bestliuhao.club/Java-数据类型.html" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
 </div>
@@ -636,8 +702,8 @@ $(".fa-clipboard").click(function(){
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Java总结/Java-代理/" rel="next" title="Java-代理">
-                <i class="fa fa-chevron-left"></i> Java-代理
+              <a href="/Java-Bean-Validation完成后端数据校验.html" rel="next" title="Java Bean Validation完成后端数据校验">
+                <i class="fa fa-chevron-left"></i> Java Bean Validation完成后端数据校验
               </a>
             
           </div>
@@ -646,8 +712,8 @@ $(".fa-clipboard").click(function(){
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Java总结/Java-Mysql索引原理/" rel="prev" title="Java-Mysql索引原理">
-                Java-Mysql索引原理 <i class="fa fa-chevron-right"></i>
+              <a href="/Java-类加载机制.html" rel="prev" title="Java-类加载机制">
+                Java-类加载机制 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -715,7 +781,7 @@ $(".fa-clipboard").click(function(){
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

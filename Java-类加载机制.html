@@ -103,17 +103,21 @@
 
 
 
-  <meta name="keywords" content="Java总结">
+  <meta name="description" content="JVM将类加载过程分为三个步骤：装载（Load），链接（Link）和初始化(Initialize)。链接又分为三个步骤，如下图所示:   装载：通过类加载器，查找并加载类的二进制数据 链接： 验证：确保被加载类的正确性；检查class文件是否符合JVM字节码格式的，正常情况由编译器生成的class文件肯定符合，如果不是，那需要验证通过才能下一步，安全考虑 准备：为类的静态变量分配内存，并将其">
+<meta name="keywords" content="Java总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="反射">
-<meta property="og:url" content="https://www.bestliuhao.club/Java总结/Java-反射/index.html">
+<meta property="og:title" content="Java-类加载机制">
+<meta property="og:url" content="https://www.bestliuhao.club/Java-类加载机制.html">
 <meta property="og:site_name" content="没有什么永垂不朽">
+<meta property="og:description" content="JVM将类加载过程分为三个步骤：装载（Load），链接（Link）和初始化(Initialize)。链接又分为三个步骤，如下图所示:   装载：通过类加载器，查找并加载类的二进制数据 链接： 验证：确保被加载类的正确性；检查class文件是否符合JVM字节码格式的，正常情况由编译器生成的class文件肯定符合，如果不是，那需要验证通过才能下一步，安全考虑 准备：为类的静态变量分配内存，并将其">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://www.bestliuhao.club/Java总结/Java-反射/反射.png">
+<meta property="og:image" content="https://www.bestliuhao.club/Java-类加载机制/类加载机制1.png">
+<meta property="og:image" content="https://www.bestliuhao.club/Java-类加载机制/类加载机制2.png">
 <meta property="og:updated_time" content="2019-05-13T09:36:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="反射">
-<meta name="twitter:image" content="https://www.bestliuhao.club/Java总结/Java-反射/反射.png">
+<meta name="twitter:title" content="Java-类加载机制">
+<meta name="twitter:description" content="JVM将类加载过程分为三个步骤：装载（Load），链接（Link）和初始化(Initialize)。链接又分为三个步骤，如下图所示:   装载：通过类加载器，查找并加载类的二进制数据 链接： 验证：确保被加载类的正确性；检查class文件是否符合JVM字节码格式的，正常情况由编译器生成的class文件肯定符合，如果不是，那需要验证通过才能下一步，安全考虑 准备：为类的静态变量分配内存，并将其">
+<meta name="twitter:image" content="https://www.bestliuhao.club/Java-类加载机制/类加载机制1.png">
 
 
 
@@ -122,7 +126,7 @@
 
 
 
-  <link rel="canonical" href="https://www.bestliuhao.club/Java总结/Java-反射/">
+  <link rel="canonical" href="https://www.bestliuhao.club/Java-类加载机制.html">
 
 
 
@@ -132,7 +136,7 @@
   };
 </script>
 
-  <title>反射 | 没有什么永垂不朽</title>
+  <title>Java-类加载机制 | 没有什么永垂不朽</title>
   
 
 
@@ -381,7 +385,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.bestliuhao.club/Java总结/Java-反射/">
+    <link itemprop="mainEntityOfPage" href="https://www.bestliuhao.club/Java-类加载机制.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘浩">
@@ -398,7 +402,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">反射
+          <h2 class="post-title" itemprop="name headline">Java-类加载机制
 
               
             
@@ -424,7 +428,7 @@
                 
               
 
-              <time title="创建时间：2019-02-28 15:23:09" itemprop="dateCreated datePublished" datetime="2019-02-28T15:23:09+08:00">2019-02-28</time>
+              <time title="创建时间：2019-02-28 14:43:57" itemprop="dateCreated datePublished" datetime="2019-02-28T14:43:57+08:00">2019-02-28</time>
             
 
             
@@ -476,8 +480,8 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
             
-                <a href="/Java总结/Java-反射/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Java总结/Java-反射/" itemprop="commentCount"></span>
+                <a href="/Java-类加载机制.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Java-类加载机制.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -513,7 +517,34 @@
       
 
       
-        <p><img src="/Java总结/Java-反射/反射.png" alt=""></p>
+        <p>   JVM将类加载过程分为三个步骤：装载（Load），链接（Link）和初始化(Initialize)。<br>链接又分为三个步骤，如下图所示:<br> <img src="/Java-类加载机制/类加载机制1.png" alt="类加载机制1" title="类加载机制1"></p>
+<ol>
+<li>装载：通过类加载器，查找并加载类的二进制数据</li>
+<li>链接：<ol>
+<li>验证：确保被加载类的正确性；检查class文件是否符合JVM字节码格式的，正常情况由编译器生成的class文件肯定符合，如果不是，那需要验证通过才能下一步，安全考虑</li>
+<li>准备：为类的静态变量分配内存，并将其初始化为默认值；如private static int a = 10<br>在准备阶段即a=0，然后解析，再到初始化的时候才a=10</li>
+<li>解析：把类中的符号引用转换为直接引用</li>
+</ol>
+</li>
+<li>初始化：为类的静态变量赋予正确的初始值，及创建对象<blockquote>
+<p>类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在运行时数据区的方法区内，然后在堆区创建一个这个类的java.lang.Class对象，用来封装类在方法区类的对象</p>
+</blockquote>
+</li>
+<li>使用对象</li>
+<li>卸载</li>
+</ol>
+<p><em>类加载器</em></p>
+<ol>
+<li>启动类加载器(Bootstrap ClassLoader)：负责加载 JAVA_HOME\lib 目录中的，或通过-Xbootclasspath参数指定路径中的，且被虚拟机认可（按文件名识别，如rt.jar）的类</li>
+<li>扩展类加载器(Extension ClassLoader)：负责加载 JAVA_HOME\lib\ext 目录中的，或通过java.ext.dirs系统变量指定路径中的类库</li>
+<li>应用程序类加载器(Application ClassLoader)：负责加载用户路径（classpath）上的类库</li>
+<li>自定义类加载器<blockquote>
+<p>JDK中的ClassLoader<br><img src="/Java-类加载机制/类加载机制2.png" alt="类加载机制2" title="类加载机制2"><br>通过上面可以看出findClass()的实现，直接抛出一个异常，并且方法是protected，很明显这是留给我们开发者自己去实现的，我们可以通过重写findClass方法来实现我们自己的类加载器。<br>Springboot通过@EnableAutoConfiguration注解，会根据META-INF/spring.<br>factories文件自动配置，通过@Configuration代理原来的xml配置类，通过@ComponentScan配置类扫描路径，反射生成ioc容器</p>
+</blockquote>
+</li>
+</ol>
+<p>参考文献：</p>
+<p><a href="https://www.cnblogs.com/xdouby/p/5829423.html" target="_blank" rel="noopener">https://www.cnblogs.com/xdouby/p/5829423.html</a><br><a href="https://blog.csdn.net/htf2620032/article/details/79298661" target="_blank" rel="noopener">https://blog.csdn.net/htf2620032/article/details/79298661</a> springlboot类加载<br><a href="http://www.cnblogs.com/zheting/p/6707035.html" target="_blank" rel="noopener">http://www.cnblogs.com/zheting/p/6707035.html</a> springboot<br><a href="https://blog.csdn.net/leileibest_437147623/article/details/80898878" target="_blank" rel="noopener">https://blog.csdn.net/leileibest_437147623/article/details/80898878</a> springboot</p>
 
       
     </div>
@@ -544,12 +575,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/Java总结/Java-反射/">反射</a></p>
+  <p><span>本文标题:</span><a href="/Java-类加载机制.html">Java-类加载机制</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 刘浩 的个人博客">刘浩</a></p>
-  <p><span>发布时间:</span>2019年02月28日 - 15:23</p>
+  <p><span>发布时间:</span>2019年02月28日 - 14:43</p>
   <p><span>最后更新:</span>2019年05月13日 - 17:36</p>
-  <p><span>原始链接:</span><a href="/Java总结/Java-反射/" title="反射">https://www.bestliuhao.club/Java总结/Java-反射/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.bestliuhao.club/Java总结/Java-反射/" aria-label="复制成功！"></i></span>
+  <p><span>原始链接:</span><a href="/Java-类加载机制.html" title="Java-类加载机制">https://www.bestliuhao.club/Java-类加载机制.html</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.bestliuhao.club/Java-类加载机制.html" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
 </div>
@@ -626,8 +657,8 @@ $(".fa-clipboard").click(function(){
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Java总结/gc垃圾回收机制/" rel="next" title="gc垃圾回收机制">
-                <i class="fa fa-chevron-left"></i> gc垃圾回收机制
+              <a href="/Java-数据类型.html" rel="next" title="Java-数据类型">
+                <i class="fa fa-chevron-left"></i> Java-数据类型
               </a>
             
           </div>
@@ -636,8 +667,8 @@ $(".fa-clipboard").click(function(){
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Java总结/Java-总结-参考文献/" rel="prev" title="Java-总结 参考文献">
-                Java-总结 参考文献 <i class="fa fa-chevron-right"></i>
+              <a href="/Java-JVM原理、调优.html" rel="prev" title="Java-JVM原理、调优">
+                Java-JVM原理、调优 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -705,7 +736,7 @@ $(".fa-clipboard").click(function(){
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

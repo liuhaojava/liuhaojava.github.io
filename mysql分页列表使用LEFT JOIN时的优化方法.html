@@ -103,20 +103,18 @@
 
 
 
-  <meta name="description" content="JVM内存结构由堆、栈、本地方法栈、方法区等部分组成  堆：主要有新生代空间（Young）和老年代空间（Old），其中Young空间，又被分为2个部    分和3个板块，分别是1个Egen区，和2个Survivor区 栈：线程私有，JVM为每个新创建的线程都分配一个栈，它的生命周期与线程相同。也就是说,对于一个Java程序来说，它的运行就是通过对栈的操作来完成的。每个方法被执行的时候都会同时创建一">
-<meta name="keywords" content="Java总结">
+  <meta name="description" content="mysql分页列表使用LEFT JOIN时的优化方法分页列表查询一般格式 取分页数据 1234567SELECT *FROM table1 t1LEFT JOIN table2 t2 ON t2.id = t1.idLEFT JOIN table3 t3 ON t3.id = t1.idLEFT JOIN table4 t4 ON t4.id = t1.idWHERE t1.id = 1 AND">
+<meta name="keywords" content="mysql分页列表优化">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java-JVM原理、调优">
-<meta property="og:url" content="https://www.bestliuhao.club/Java总结/Java-JVM原理、调优/index.html">
+<meta property="og:title" content="mysql分页列表使用LEFT JOIN时的优化方法">
+<meta property="og:url" content="https://www.bestliuhao.club/mysql分页列表使用LEFT JOIN时的优化方法.html">
 <meta property="og:site_name" content="没有什么永垂不朽">
-<meta property="og:description" content="JVM内存结构由堆、栈、本地方法栈、方法区等部分组成  堆：主要有新生代空间（Young）和老年代空间（Old），其中Young空间，又被分为2个部    分和3个板块，分别是1个Egen区，和2个Survivor区 栈：线程私有，JVM为每个新创建的线程都分配一个栈，它的生命周期与线程相同。也就是说,对于一个Java程序来说，它的运行就是通过对栈的操作来完成的。每个方法被执行的时候都会同时创建一">
+<meta property="og:description" content="mysql分页列表使用LEFT JOIN时的优化方法分页列表查询一般格式 取分页数据 1234567SELECT *FROM table1 t1LEFT JOIN table2 t2 ON t2.id = t1.idLEFT JOIN table3 t3 ON t3.id = t1.idLEFT JOIN table4 t4 ON t4.id = t1.idWHERE t1.id = 1 AND">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://www.bestliuhao.club/Java总结/Java-JVM原理、调优/jvm原理、调优.png">
 <meta property="og:updated_time" content="2019-05-13T09:36:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java-JVM原理、调优">
-<meta name="twitter:description" content="JVM内存结构由堆、栈、本地方法栈、方法区等部分组成  堆：主要有新生代空间（Young）和老年代空间（Old），其中Young空间，又被分为2个部    分和3个板块，分别是1个Egen区，和2个Survivor区 栈：线程私有，JVM为每个新创建的线程都分配一个栈，它的生命周期与线程相同。也就是说,对于一个Java程序来说，它的运行就是通过对栈的操作来完成的。每个方法被执行的时候都会同时创建一">
-<meta name="twitter:image" content="https://www.bestliuhao.club/Java总结/Java-JVM原理、调优/jvm原理、调优.png">
+<meta name="twitter:title" content="mysql分页列表使用LEFT JOIN时的优化方法">
+<meta name="twitter:description" content="mysql分页列表使用LEFT JOIN时的优化方法分页列表查询一般格式 取分页数据 1234567SELECT *FROM table1 t1LEFT JOIN table2 t2 ON t2.id = t1.idLEFT JOIN table3 t3 ON t3.id = t1.idLEFT JOIN table4 t4 ON t4.id = t1.idWHERE t1.id = 1 AND">
 
 
 
@@ -125,7 +123,7 @@
 
 
 
-  <link rel="canonical" href="https://www.bestliuhao.club/Java总结/Java-JVM原理、调优/">
+  <link rel="canonical" href="https://www.bestliuhao.club/mysql分页列表使用LEFT JOIN时的优化方法.html">
 
 
 
@@ -135,7 +133,7 @@
   };
 </script>
 
-  <title>Java-JVM原理、调优 | 没有什么永垂不朽</title>
+  <title>mysql分页列表使用LEFT JOIN时的优化方法 | 没有什么永垂不朽</title>
   
 
 
@@ -384,7 +382,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.bestliuhao.club/Java总结/Java-JVM原理、调优/">
+    <link itemprop="mainEntityOfPage" href="https://www.bestliuhao.club/mysql分页列表使用LEFT JOIN时的优化方法.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘浩">
@@ -401,7 +399,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java-JVM原理、调优
+          <h2 class="post-title" itemprop="name headline">mysql分页列表使用LEFT JOIN时的优化方法
 
               
             
@@ -427,24 +425,12 @@
                 
               
 
-              <time title="创建时间：2019-02-28 15:02:05" itemprop="dateCreated datePublished" datetime="2019-02-28T15:02:05+08:00">2019-02-28</time>
+              <time title="创建时间：2019-05-13 17:43:25 / 修改时间：17:36:59" itemprop="dateCreated datePublished" datetime="2019-05-13T17:43:25+08:00">2019-05-13</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-05-13 17:36:59" itemprop="dateModified" datetime="2019-05-13T17:36:59+08:00">2019-05-13</time>
               
             
           </span>
@@ -461,7 +447,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Java总结/" itemprop="url" rel="index"><span itemprop="name">Java总结</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
 
                 
                 
@@ -479,8 +465,8 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
             
-                <a href="/Java总结/Java-JVM原理、调优/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Java总结/Java-JVM原理、调优/" itemprop="commentCount"></span>
+                <a href="/mysql分页列表使用LEFT JOIN时的优化方法.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/mysql分页列表使用LEFT JOIN时的优化方法.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -516,19 +502,67 @@
       
 
       
-        <p><img src="/Java总结/Java-JVM原理、调优/jvm原理、调优.png" alt="JVM原理、调优" title="JVM原理、调优"><br>JVM内存结构由堆、栈、本地方法栈、方法区等部分组成</p>
-<ol>
-<li>堆：主要有新生代空间（Young）和老年代空间（Old），其中Young空间，又被分为2个部    分和3个板块，分别是1个Egen区，和2个Survivor区</li>
-<li>栈：线程私有，JVM为每个新创建的线程都分配一个栈，它的生命周期与线程相同。也就是说,对于一个Java程序来说，它的运行就是通过对栈的操作来完成的。每个方法被执行的时候都会同时创建一个栈帧（Stack Frame）用于存储局部变量表、操作栈、动态链接、方法出口等信息。每一个方法被调用直至执行完成的过程，就对应着一个栈帧在虚拟机栈中从入栈到出栈的过程，该过程具有先进后出的特性。<br>本地方法栈：用于支持native方法的执行，存储了每个native方法调用的状态</li>
-<li>方法区：存放了jvm初始化时加载器加载的类信息、静态变量、final类型的常量、属性和方法信息。（永久代和元空间都是方法区的一种实现，区别是，永久代使用的是JVM的堆内存空间，会内存溢出，而元空间使用的是物理内存，直接受到本机的物理内存限制。 ）</li>
-<li>程序计数器：程序计数器（Program Counter Register）是一块较小的内存空间，它的作用可以看做是当前线程所执行的字节码的行号指示器<blockquote>
-<p>方法区和堆是所有线程共享的内存区域；而java栈、本地方法栈和程序员计数器是运行是线程私有的内存区域。</p>
-</blockquote>
+        <h1 id="mysql分页列表使用LEFT-JOIN时的优化方法"><a href="#mysql分页列表使用LEFT-JOIN时的优化方法" class="headerlink" title="mysql分页列表使用LEFT JOIN时的优化方法"></a>mysql分页列表使用LEFT JOIN时的优化方法</h1><h3 id="分页列表查询一般格式"><a href="#分页列表查询一般格式" class="headerlink" title="分页列表查询一般格式"></a>分页列表查询一般格式</h3><ul>
+<li><p>取分页数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SELECT *</span><br><span class="line">FROM table1 t1</span><br><span class="line">LEFT JOIN table2 t2 ON t2.id = t1.id</span><br><span class="line">LEFT JOIN table3 t3 ON t3.id = t1.id</span><br><span class="line">LEFT JOIN table4 t4 ON t4.id = t1.id</span><br><span class="line">WHERE t1.id = 1 AND t2. ...</span><br><span class="line">LIMIT 0,30</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<p>jconsole 使用：</p>
-<p>参考文献：</p>
-<p><a href="http://www.importnew.com/23792.html" target="_blank" rel="noopener">http://www.importnew.com/23792.html</a> </p>
+<li><p>取总数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">SELECT COUNT(0)</span><br><span class="line">FROM table1 t1</span><br><span class="line">LEFT JOIN table2 t2 ON t2.id = t1.id</span><br><span class="line">LEFT JOIN table3 t3 ON t3.id = t1.id</span><br><span class="line">LEFT JOIN table4 t4 ON t4.id = t1.id</span><br><span class="line">WHERE t1.id = 1 AND t2. ...</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><blockquote>
+<ul>
+<li><code>LEFT JOIN</code>消耗性能</li>
+<li>全部<code>LEFT JOIN</code>后再取分页</li>
+<li>取总数时候不必要的<code>LEFT JOIN</code>影响性能</li>
+</ul>
+</blockquote>
+<h4 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h4><blockquote>
+<ul>
+<li><code>WHERE</code> 条件语句用不到的<code>LEFT JOIN</code>的表，放到取分页后面</li>
+<li>取总数时候不必要的<code>LEFT JOIN</code>不要</li>
+</ul>
+</blockquote>
+<ul>
+<li><p>取分页数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">SELECT *</span><br><span class="line">FROM (</span><br><span class="line">    SELECT *</span><br><span class="line">    FROM table1 t1</span><br><span class="line">    LEFT JOIN table2 t2 ON t2.id = t1.id</span><br><span class="line">    LEFT JOIN table3 t3 ON t3.id = t1.id</span><br><span class="line">    WHERE t1.id = 1 AND t2. ...</span><br><span class="line">    LIMIT 0,30</span><br><span class="line">    )t</span><br><span class="line">LEFT JOIN table4 t4 ON t4.id = t1.id</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>取总数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT COUNT(0)</span><br><span class="line">FROM table1 t1</span><br><span class="line">LEFT JOIN table2 t2 ON t2.id = t1.id</span><br><span class="line">LEFT JOIN table2 t3 ON t3.id = t1.id</span><br><span class="line">WHERE t1.id = 1 AND t2. ...</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="具体实际应用"><a href="#具体实际应用" class="headerlink" title="具体实际应用"></a>具体实际应用</h3><h4 id="网站分页列表"><a href="#网站分页列表" class="headerlink" title="网站分页列表"></a>网站分页列表</h4><h5 id="优化前"><a href="#优化前" class="headerlink" title="优化前"></a>优化前</h5><blockquote>
+<ul>
+<li>数据量：9741 </li>
+<li>每页显示30条数据</li>
+<li>平均每页刷新耗时：1100ms</li>
+<li>列表数据<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">SELECT </span><br><span class="line">    w.*,</span><br><span class="line">    d.`name` AS deptName,</span><br><span class="line">    IFNULL(de.`name`,&apos;&apos;) AS superviseName,</span><br><span class="line">    CASE WHEN w.school_id IS NULL THEN d.`name` ELSE s.name END AS schoolName</span><br><span class="line">    FROM website w</span><br><span class="line">    LEFT JOIN sys_dept d ON d.id = w.dept_id</span><br><span class="line">    LEFT JOIN sys_dept de ON de.id = w.supervise_id</span><br><span class="line">    LEFT JOIN sys_dept scan ON scan.id = w.scan_id</span><br><span class="line">    LEFT JOIN sys_dept verify ON verify.id = w.verify_id</span><br><span class="line">    LEFT JOIN sys_dept_info i ON i.dept_id = w.dept_id</span><br><span class="line">    LEFT JOIN dictionary_item item ON i.area_id = item.id</span><br><span class="line">    LEFT JOIN school s ON s.id = w.school_id</span><br><span class="line">    WHERE w.is_del = 0</span><br><span class="line">    &lt;if test=&quot;deptId != null and deptId != &apos;&apos;&quot;&gt;</span><br><span class="line">        AND d.id = #&#123;deptId&#125;</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">    &lt;if test=&quot;name != null and name != &apos;&apos;&quot;&gt;</span><br><span class="line">        AND (UPPER(w.name) LIKE UPPER(CONCAT(&apos;%&apos;,CONCAT(#&#123;name&#125;,&apos;%&apos;)))</span><br><span class="line">        OR UPPER(w.py) LIKE UPPER(CONCAT(&apos;%&apos;,CONCAT(#&#123;name&#125;,&apos;%&apos;))))</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">    &lt;if test=&quot;url != null and url != &apos;&apos;&quot;&gt;</span><br><span class="line">        AND UPPER(w.url) LIKE UPPER(CONCAT(&apos;%&apos;,CONCAT(#&#123;url&#125;,&apos;%&apos;)))</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">    &lt;if test=&quot;linkman != null and linkman != &apos;&apos;&quot;&gt;</span><br><span class="line">        AND UPPER(w.contact_name) LIKE UPPER(CONCAT(&apos;%&apos;,CONCAT(#&#123;linkman&#125;,&apos;%&apos;)))</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">    ORDER BY w.create_date DESC</span><br><span class="line">    &lt;if test=&quot;pageSize != null &quot;&gt;</span><br><span class="line">        LIMIT #&#123;offset&#125;, #&#123;pageSize&#125;</span><br><span class="line">    &lt;/if&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>网站数量<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">SELECT </span><br><span class="line">    COUNT(0)</span><br><span class="line">    FROM website w</span><br><span class="line">    LEFT JOIN sys_dept d ON d.id = w.dept_id</span><br><span class="line">    LEFT JOIN sys_dept de ON de.id = w.supervise_id</span><br><span class="line">    LEFT JOIN sys_dept scan ON scan.id = w.scan_id</span><br><span class="line">    LEFT JOIN sys_dept verify ON verify.id = w.verify_id</span><br><span class="line">    LEFT JOIN sys_dept_info i ON i.dept_id = w.dept_id</span><br><span class="line">    LEFT JOIN dictionary_item item ON i.area_id = item.id</span><br><span class="line">    LEFT JOIN school s ON s.id = w.school_id</span><br><span class="line">    WHERE w.is_del = 0</span><br><span class="line">    &lt;if test=&quot;deptId != null and deptId != &apos;&apos;&quot;&gt;</span><br><span class="line">        AND d.id = #&#123;deptId&#125;</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">    &lt;if test=&quot;name != null and name != &apos;&apos;&quot;&gt;</span><br><span class="line">        AND (UPPER(w.name) LIKE UPPER(CONCAT(&apos;%&apos;,CONCAT(#&#123;name&#125;,&apos;%&apos;)))</span><br><span class="line">        OR UPPER(w.py) LIKE UPPER(CONCAT(&apos;%&apos;,CONCAT(#&#123;name&#125;,&apos;%&apos;))))</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">    &lt;if test=&quot;url != null and url != &apos;&apos;&quot;&gt;</span><br><span class="line">        AND UPPER(w.url) LIKE UPPER(CONCAT(&apos;%&apos;,CONCAT(#&#123;url&#125;,&apos;%&apos;)))</span><br><span class="line">    &lt;/if&gt;</span><br><span class="line">    &lt;if test=&quot;linkman != null and linkman != &apos;&apos;&quot;&gt;</span><br><span class="line">        AND UPPER(w.contact_name) LIKE UPPER(CONCAT(&apos;%&apos;,CONCAT(#&#123;linkman&#125;,&apos;%&apos;)))</span><br><span class="line">    &lt;/if&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="优化-1"><a href="#优化-1" class="headerlink" title="优化"></a>优化</h5><blockquote>
+<ul>
+<li>数据量：9741 </li>
+<li>每页显示300条数据</li>
+<li>平均每页刷新耗时：120ms</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>每页显示30条数据</li>
+<li>平均每页刷新耗时：50ms</li>
+<li>列表数据<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">    t.*,</span><br><span class="line">    item.name                 AS areaName,</span><br><span class="line">    IFNULL(scan.`name`, &apos;&apos;)   AS scanName,</span><br><span class="line">    IFNULL(verify.`name`, &apos;&apos;) AS verifyName,</span><br><span class="line">    de.`name`                 AS superviseName</span><br><span class="line">    FROM (</span><br><span class="line">        SELECT</span><br><span class="line">            w.id,</span><br><span class="line">            w.name,</span><br><span class="line">            w.url,</span><br><span class="line">            w.dept_id,</span><br><span class="line">            w.scan_id,</span><br><span class="line">            w.supervise_id,</span><br><span class="line">            w.verify_id,</span><br><span class="line">            CASE WHEN w.school_id IS NULL THEN d.`name` ELSE s.name END  AS schoolName,</span><br><span class="line">            d.`name`                                                     AS deptName</span><br><span class="line">        FROM website w</span><br><span class="line">        LEFT JOIN sys_dept d ON d.id = w.dept_id</span><br><span class="line">        LEFT JOIN school s ON s.id = w.school_id</span><br><span class="line">        WHERE w.is_del = 0</span><br><span class="line">        &lt;if test=&quot;deptId != null and deptId != &apos;&apos;&quot;&gt;</span><br><span class="line">            AND d.id = #&#123;deptId&#125;</span><br><span class="line">        &lt;/if&gt;</span><br><span class="line">        &lt;if test=&quot;deptName != null and deptName != &apos;&apos;&quot;&gt;</span><br><span class="line">            AND (UPPER(d.name) LIKE UPPER(CONCAT(&apos;%&apos;,CONCAT(#&#123;deptName&#125;,&apos;%&apos;)))</span><br><span class="line">            OR UPPER(d.py) LIKE UPPER(CONCAT(&apos;%&apos;,CONCAT(#&#123;deptName&#125;,&apos;%&apos;)))</span><br><span class="line">            OR UPPER(s.name) LIKE UPPER(CONCAT(&apos;%&apos;,CONCAT(#&#123;deptName&#125;,&apos;%&apos;))))</span><br><span class="line">        &lt;/if&gt;</span><br><span class="line">        &lt;if test=&quot;name != null and name != &apos;&apos;&quot;&gt;</span><br><span class="line">            AND (UPPER(w.name) LIKE UPPER(CONCAT(&apos;%&apos;,CONCAT(#&#123;name&#125;,&apos;%&apos;)))</span><br><span class="line">            OR UPPER(w.py) LIKE UPPER(CONCAT(&apos;%&apos;,CONCAT(#&#123;name&#125;,&apos;%&apos;))))</span><br><span class="line">        &lt;/if&gt;</span><br><span class="line">        &lt;if test=&quot;url != null and url != &apos;&apos;&quot;&gt;</span><br><span class="line">            AND UPPER(w.url) LIKE UPPER(CONCAT(&apos;%&apos;,CONCAT(#&#123;url&#125;,&apos;%&apos;)))</span><br><span class="line">        &lt;/if&gt;</span><br><span class="line">        &lt;if test=&quot;linkman != null and linkman != &apos;&apos;&quot;&gt;</span><br><span class="line">            AND UPPER(w.contact_name) LIKE UPPER(CONCAT(&apos;%&apos;,CONCAT(#&#123;linkman&#125;,&apos;%&apos;)))</span><br><span class="line">        &lt;/if&gt;</span><br><span class="line">        ORDER BY w.create_date DESC</span><br><span class="line">        &lt;if test=&quot;pageSize != null &quot;&gt;</span><br><span class="line">            LIMIT #&#123;offset&#125;, #&#123;pageSize&#125;</span><br><span class="line">        &lt;/if&gt;</span><br><span class="line">    ) t</span><br><span class="line">    LEFT JOIN sys_dept_info i ON i.dept_id = t.dept_id</span><br><span class="line">    LEFT JOIN dictionary_item item ON i.area_id = item.id</span><br><span class="line">    LEFT JOIN sys_dept de ON de.id = t.supervise_id</span><br><span class="line">    LEFT JOIN sys_dept scan ON scan.id = t.scan_id</span><br><span class="line">    LEFT JOIN sys_dept verify ON verify.id = t.verify_id</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>网站数量<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">    COUNT(0)</span><br><span class="line">    FROM (</span><br><span class="line">        SELECT</span><br><span class="line">            w.id,</span><br><span class="line">            w.name,</span><br><span class="line">            w.url,</span><br><span class="line">            w.dept_id,</span><br><span class="line">            w.scan_id,</span><br><span class="line">            w.supervise_id,</span><br><span class="line">            w.verify_id,</span><br><span class="line">            CASE WHEN w.school_id IS NULL THEN d.`name` ELSE s.name END  AS schoolName,</span><br><span class="line">            d.`name`                                                     AS deptName</span><br><span class="line">        FROM website w</span><br><span class="line">        LEFT JOIN sys_dept d ON d.id = w.dept_id</span><br><span class="line">        LEFT JOIN school s ON s.id = w.school_id</span><br><span class="line">        WHERE w.is_del = 0</span><br><span class="line">        &lt;if test=&quot;deptId != null and deptId != &apos;&apos;&quot;&gt;</span><br><span class="line">            AND d.id = #&#123;deptId&#125;</span><br><span class="line">        &lt;/if&gt;</span><br><span class="line">        &lt;if test=&quot;deptName != null and deptName != &apos;&apos;&quot;&gt;</span><br><span class="line">            AND (UPPER(d.name) LIKE UPPER(CONCAT(&apos;%&apos;,CONCAT(#&#123;deptName&#125;,&apos;%&apos;)))</span><br><span class="line">            OR UPPER(d.py) LIKE UPPER(CONCAT(&apos;%&apos;,CONCAT(#&#123;deptName&#125;,&apos;%&apos;)))</span><br><span class="line">            OR UPPER(s.name) LIKE UPPER(CONCAT(&apos;%&apos;,CONCAT(#&#123;deptName&#125;,&apos;%&apos;))))</span><br><span class="line">        &lt;/if&gt;</span><br><span class="line">        &lt;if test=&quot;name != null and name != &apos;&apos;&quot;&gt;</span><br><span class="line">            AND (UPPER(w.name) LIKE UPPER(CONCAT(&apos;%&apos;,CONCAT(#&#123;name&#125;,&apos;%&apos;)))</span><br><span class="line">            OR UPPER(w.py) LIKE UPPER(CONCAT(&apos;%&apos;,CONCAT(#&#123;name&#125;,&apos;%&apos;))))</span><br><span class="line">        &lt;/if&gt;</span><br><span class="line">        &lt;if test=&quot;url != null and url != &apos;&apos;&quot;&gt;</span><br><span class="line">            AND UPPER(w.url) LIKE UPPER(CONCAT(&apos;%&apos;,CONCAT(#&#123;url&#125;,&apos;%&apos;)))</span><br><span class="line">        &lt;/if&gt;</span><br><span class="line">        &lt;if test=&quot;linkman != null and linkman != &apos;&apos;&quot;&gt;</span><br><span class="line">            AND UPPER(w.contact_name) LIKE UPPER(CONCAT(&apos;%&apos;,CONCAT(#&#123;linkman&#125;,&apos;%&apos;)))</span><br><span class="line">        &lt;/if&gt;</span><br><span class="line">        ORDER BY w.create_date DESC</span><br><span class="line">        &lt;if test=&quot;pageSize != null &quot;&gt;</span><br><span class="line">            LIMIT #&#123;offset&#125;, #&#123;pageSize&#125;</span><br><span class="line">        &lt;/if&gt;</span><br><span class="line">    ) t</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
@@ -559,12 +593,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/Java总结/Java-JVM原理、调优/">Java-JVM原理、调优</a></p>
+  <p><span>本文标题:</span><a href="/mysql分页列表使用LEFT JOIN时的优化方法.html">mysql分页列表使用LEFT JOIN时的优化方法</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 刘浩 的个人博客">刘浩</a></p>
-  <p><span>发布时间:</span>2019年02月28日 - 15:02</p>
+  <p><span>发布时间:</span>2019年05月13日 - 17:43</p>
   <p><span>最后更新:</span>2019年05月13日 - 17:36</p>
-  <p><span>原始链接:</span><a href="/Java总结/Java-JVM原理、调优/" title="Java-JVM原理、调优">https://www.bestliuhao.club/Java总结/Java-JVM原理、调优/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.bestliuhao.club/Java总结/Java-JVM原理、调优/" aria-label="复制成功！"></i></span>
+  <p><span>原始链接:</span><a href="/mysql分页列表使用LEFT JOIN时的优化方法.html" title="mysql分页列表使用LEFT JOIN时的优化方法">https://www.bestliuhao.club/mysql分页列表使用LEFT JOIN时的优化方法.html</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.bestliuhao.club/mysql分页列表使用LEFT JOIN时的优化方法.html" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
 </div>
@@ -628,7 +662,7 @@ $(".fa-clipboard").click(function(){
       
         <div class="post-tags">
           
-            <a href="/tags/Java总结/" rel="tag"><i class="fa fa-tag"></i> Java总结</a>
+            <a href="/tags/mysql分页列表优化/" rel="tag"><i class="fa fa-tag"></i> mysql分页列表优化</a>
           
         </div>
       
@@ -641,8 +675,8 @@ $(".fa-clipboard").click(function(){
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Java总结/Java-类加载机制/" rel="next" title="Java-类加载机制">
-                <i class="fa fa-chevron-left"></i> Java-类加载机制
+              <a href="/springboot集成swagger2遇到的问题.html" rel="next" title="springboot集成swagger2遇到的问题">
+                <i class="fa fa-chevron-left"></i> springboot集成swagger2遇到的问题
               </a>
             
           </div>
@@ -650,10 +684,6 @@ $(".fa-clipboard").click(function(){
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Java总结/gc垃圾回收机制/" rel="prev" title="gc垃圾回收机制">
-                gc垃圾回收机制 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -702,8 +732,17 @@ $(".fa-clipboard").click(function(){
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -720,7 +759,7 @@ $(".fa-clipboard").click(function(){
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -840,6 +879,23 @@ $(".fa-clipboard").click(function(){
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#mysql分页列表使用LEFT-JOIN时的优化方法"><span class="nav-number">1.</span> <span class="nav-text">mysql分页列表使用LEFT JOIN时的优化方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分页列表查询一般格式"><span class="nav-number">1.0.1.</span> <span class="nav-text">分页列表查询一般格式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#缺点"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#优化"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">优化</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体实际应用"><span class="nav-number">1.0.2.</span> <span class="nav-text">具体实际应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#网站分页列表"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">网站分页列表</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#优化前"><span class="nav-number">1.0.2.1.1.</span> <span class="nav-text">优化前</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#优化-1"><span class="nav-number">1.0.2.1.2.</span> <span class="nav-text">优化</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

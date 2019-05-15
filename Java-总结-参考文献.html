@@ -103,23 +103,18 @@
 
 
 
-  <meta name="description" content="为了快速查询，很多时候，我们会建立不同的索引，满足需求，mysql主要索引引擎有MyISAM和InnoDB，两者都是使用B+Tree作为索引结构，两者的区别： 一是主索引的区别，InnoDB的数据文件本身就是索引文件。而MyISAM的索引和数据是分开的。 二是辅助索引的区别：InnoDB的辅助索引data域存储相应记录主键的值而不是地址。而MyISAM的辅助索引和主索引没有多大区别。查询过程如下：">
+  <meta name="description" content="类加载机制https://www.cnblogs.com/xdouby/p/5829423.htmlhttps://blog.csdn.net/htf2620032/article/details/79298661 springlboot类加载http://www.cnblogs.com/zheting/p/6707035.html springboothttps://blog.csdn.net/">
 <meta name="keywords" content="Java总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java-Mysql索引原理">
-<meta property="og:url" content="https://www.bestliuhao.club/Java总结/Java-Mysql索引原理/index.html">
+<meta property="og:title" content="Java-总结 参考文献">
+<meta property="og:url" content="https://www.bestliuhao.club/Java-总结-参考文献.html">
 <meta property="og:site_name" content="没有什么永垂不朽">
-<meta property="og:description" content="为了快速查询，很多时候，我们会建立不同的索引，满足需求，mysql主要索引引擎有MyISAM和InnoDB，两者都是使用B+Tree作为索引结构，两者的区别： 一是主索引的区别，InnoDB的数据文件本身就是索引文件。而MyISAM的索引和数据是分开的。 二是辅助索引的区别：InnoDB的辅助索引data域存储相应记录主键的值而不是地址。而MyISAM的辅助索引和主索引没有多大区别。查询过程如下：">
+<meta property="og:description" content="类加载机制https://www.cnblogs.com/xdouby/p/5829423.htmlhttps://blog.csdn.net/htf2620032/article/details/79298661 springlboot类加载http://www.cnblogs.com/zheting/p/6707035.html springboothttps://blog.csdn.net/">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://www.bestliuhao.club/Java总结/Java-Mysql索引原理/Java-Mysql索引原理1.png">
-<meta property="og:image" content="https://www.bestliuhao.club/Java总结/Java-Mysql索引原理/Java-Mysql索引原理2.png">
-<meta property="og:image" content="https://www.bestliuhao.club/Java总结/Java-Mysql索引原理/Java-Mysql索引原理3.png">
-<meta property="og:image" content="https://www.bestliuhao.club/Java总结/Java-Mysql索引原理/Java-Mysql索引原理4.png">
 <meta property="og:updated_time" content="2019-05-13T09:36:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java-Mysql索引原理">
-<meta name="twitter:description" content="为了快速查询，很多时候，我们会建立不同的索引，满足需求，mysql主要索引引擎有MyISAM和InnoDB，两者都是使用B+Tree作为索引结构，两者的区别： 一是主索引的区别，InnoDB的数据文件本身就是索引文件。而MyISAM的索引和数据是分开的。 二是辅助索引的区别：InnoDB的辅助索引data域存储相应记录主键的值而不是地址。而MyISAM的辅助索引和主索引没有多大区别。查询过程如下：">
-<meta name="twitter:image" content="https://www.bestliuhao.club/Java总结/Java-Mysql索引原理/Java-Mysql索引原理1.png">
+<meta name="twitter:title" content="Java-总结 参考文献">
+<meta name="twitter:description" content="类加载机制https://www.cnblogs.com/xdouby/p/5829423.htmlhttps://blog.csdn.net/htf2620032/article/details/79298661 springlboot类加载http://www.cnblogs.com/zheting/p/6707035.html springboothttps://blog.csdn.net/">
 
 
 
@@ -128,7 +123,7 @@
 
 
 
-  <link rel="canonical" href="https://www.bestliuhao.club/Java总结/Java-Mysql索引原理/">
+  <link rel="canonical" href="https://www.bestliuhao.club/Java-总结-参考文献.html">
 
 
 
@@ -138,7 +133,7 @@
   };
 </script>
 
-  <title>Java-Mysql索引原理 | 没有什么永垂不朽</title>
+  <title>Java-总结 参考文献 | 没有什么永垂不朽</title>
   
 
 
@@ -387,7 +382,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.bestliuhao.club/Java总结/Java-Mysql索引原理/">
+    <link itemprop="mainEntityOfPage" href="https://www.bestliuhao.club/Java-总结-参考文献.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘浩">
@@ -404,7 +399,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java-Mysql索引原理
+          <h2 class="post-title" itemprop="name headline">Java-总结 参考文献
 
               
             
@@ -430,7 +425,7 @@
                 
               
 
-              <time title="创建时间：2019-02-28 16:19:26" itemprop="dateCreated datePublished" datetime="2019-02-28T16:19:26+08:00">2019-02-28</time>
+              <time title="创建时间：2019-02-28 15:30:15" itemprop="dateCreated datePublished" datetime="2019-02-28T15:30:15+08:00">2019-02-28</time>
             
 
             
@@ -482,8 +477,8 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
             
-                <a href="/Java总结/Java-Mysql索引原理/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Java总结/Java-Mysql索引原理/" itemprop="commentCount"></span>
+                <a href="/Java-总结-参考文献.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Java-总结-参考文献.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -519,15 +514,12 @@
       
 
       
-        <p>为了快速查询，很多时候，我们会建立不同的索引，满足需求，mysql主要索引引擎有MyISAM和InnoDB，两者都是使用B+Tree作为索引结构，两者的<br>区别： 一是主索引的区别，InnoDB的数据文件本身就是索引文件。而MyISAM的索引和数据是分开的。 二是辅助索引的区别：InnoDB的辅助索引data<br>域存储相应记录主键的值而不是地址。而MyISAM的辅助索引和主索引没有多大区别。<br><img src="/Java总结/Java-Mysql索引原理/Java-Mysql索引原理1.png" alt=""><br><img src="/Java总结/Java-Mysql索引原理/Java-Mysql索引原理2.png" alt=""><br><img src="/Java总结/Java-Mysql索引原理/Java-Mysql索引原理3.png" alt=""><br>查询过程如下：<br><img src="/Java总结/Java-Mysql索引原理/Java-Mysql索引原理4.png" alt=""><br>在上图中，如果要查找数据项29，那么首先会把磁盘块1由磁盘加载到内存，此时发生一次IO，在内存中用二分查找确定29在17和35之间，锁定磁盘块1<br>的P2指针，内存时间因为非常短（相比磁盘的IO）可以忽略不计，通过磁盘块1的P2指针的磁盘地址把磁盘块3由磁盘加载到内存，发生第二次IO，29在<br>26和30之间，锁定磁盘块3的P2指针，通过指针加载磁盘块8到内存，发生第三次IO，同时内存中做二分查找找到29，结束查询，总计三次IO。真实的情<br>况是，3层的b+树可以表示上百万的数据（h高度会影响数据量），如果上百万的数据查找只需要三次IO，性能提高将是巨大的，如果没有索引，每个数据<br>项都要发生一次IO，那么总共需要百万次的IO，显然成本非常非常高。<br>性能优化点：  </p>
-<ol>
-<li>索引建立</li>
-<li>sql中使用函数会导致索引失效</li>
-<li>sql中like “xx%”索引生效，like “%xx”和like “%xx%”，索引不生效</li>
-<li>in (1，2，3) 常量索引生效，in (子查询)，索引不生效</li>
-<li>缩小结果集查询</li>
-</ol>
-<p>参考文献：<br><a href="https://blog.csdn.net/u010842515/article/details/68929687" target="_blank" rel="noopener">https://blog.csdn.net/u010842515/article/details/68929687</a> MyISAM和InnoDB引擎区别<br><a href="https://www.cnblogs.com/ssrstm/p/6806111.html" target="_blank" rel="noopener">https://www.cnblogs.com/ssrstm/p/6806111.html</a></p>
+        <p>类加载机制<br><a href="https://www.cnblogs.com/xdouby/p/5829423.html" target="_blank" rel="noopener">https://www.cnblogs.com/xdouby/p/5829423.html</a><br><a href="https://blog.csdn.net/htf2620032/article/details/79298661" target="_blank" rel="noopener">https://blog.csdn.net/htf2620032/article/details/79298661</a> springlboot类加载<br><a href="http://www.cnblogs.com/zheting/p/6707035.html" target="_blank" rel="noopener">http://www.cnblogs.com/zheting/p/6707035.html</a> springboot<br><a href="https://blog.csdn.net/leileibest_437147623/article/details/80898878" target="_blank" rel="noopener">https://blog.csdn.net/leileibest_437147623/article/details/80898878</a> springboot</p>
+<p>jvm原理、gc垃圾回收机制：<br><a href="http://www.importnew.com/23792.html" target="_blank" rel="noopener">http://www.importnew.com/23792.html</a><br><a href="https://www.cnblogs.com/aspirant/p/8662690.html" target="_blank" rel="noopener">https://www.cnblogs.com/aspirant/p/8662690.html</a> </p>
+<p>jdk动态原理<br><a href="https://www.cnblogs.com/MOBIN/p/5597215.html" target="_blank" rel="noopener">https://www.cnblogs.com/MOBIN/p/5597215.html</a> </p>
+<p>java集合<br><a href="https://blog.csdn.net/qq_25868207/article/details/55259978" target="_blank" rel="noopener">https://blog.csdn.net/qq_25868207/article/details/55259978</a><br><a href="https://blog.csdn.net/u010890358/article/details/80496144" target="_blank" rel="noopener">https://blog.csdn.net/u010890358/article/details/80496144</a> hashmap扩容<br><a href="https://blog.csdn.net/lizhongkaide/article/details/50595719" target="_blank" rel="noopener">https://blog.csdn.net/lizhongkaide/article/details/50595719</a> hashmap原理<br><a href="https://blog.csdn.net/qq_36178899/article/details/84333151" target="_blank" rel="noopener">https://blog.csdn.net/qq_36178899/article/details/84333151</a> hashmap原理<br><a href="https://segmentfault.com/a/1190000012926722" target="_blank" rel="noopener">https://segmentfault.com/a/1190000012926722</a> hashmap原理<br><a href="https://segmentfault.com/a/1190000017509668" target="_blank" rel="noopener">https://segmentfault.com/a/1190000017509668</a> hashmap落点均匀<br><a href="https://blog.csdn.net/u010841296/article/details/82832166" target="_blank" rel="noopener">https://blog.csdn.net/u010841296/article/details/82832166</a> hashmap容量大小<br><a href="http://www.360linker.com/sj/643.jhtml" target="_blank" rel="noopener">http://www.360linker.com/sj/643.jhtml</a> hashmap容量大小</p>
+<p>Mysql索引原理<br><a href="https://blog.csdn.net/u010842515/article/details/68929687" target="_blank" rel="noopener">https://blog.csdn.net/u010842515/article/details/68929687</a> MyISAM和InnoDB引擎区别<br><a href="https://www.cnblogs.com/ssrstm/p/6806111.html" target="_blank" rel="noopener">https://www.cnblogs.com/ssrstm/p/6806111.html</a> </p>
+<p>常用算法：<br><a href="https://blog.csdn.net/eson_15/article/details/51138663" target="_blank" rel="noopener">https://blog.csdn.net/eson_15/article/details/51138663</a> 二叉树<br><a href="https://blog.csdn.net/u014182411/article/details/69831492" target="_blank" rel="noopener">https://blog.csdn.net/u014182411/article/details/69831492</a> 二叉树<br><a href="https://www.cnblogs.com/aiyelinglong/archive/2012/03/27/2419972.html" target="_blank" rel="noopener">https://www.cnblogs.com/aiyelinglong/archive/2012/03/27/2419972.html</a> 二叉树<br><a href="https://blog.csdn.net/eson_15/article/details/51144079" target="_blank" rel="noopener">https://blog.csdn.net/eson_15/article/details/51144079</a> 红黑树<br><a href="https://www.jianshu.com/p/d25e490e2441" target="_blank" rel="noopener">https://www.jianshu.com/p/d25e490e2441</a> 红黑树 +1<br><a href="https://blog.csdn.net/tanrui519521/article/details/80980135" target="_blank" rel="noopener">https://blog.csdn.net/tanrui519521/article/details/80980135</a> 红黑树<br><a href="https://www.jianshu.com/p/7dedb7ebe033" target="_blank" rel="noopener">https://www.jianshu.com/p/7dedb7ebe033</a> B树<br><a href="https://www.jianshu.com/p/6f68d3c118d6" target="_blank" rel="noopener">https://www.jianshu.com/p/6f68d3c118d6</a> b+树<br><a href="https://www.jianshu.com/p/db226e0196b4" target="_blank" rel="noopener">https://www.jianshu.com/p/db226e0196b4</a> b树、B+树<br><a href="https://www.cnblogs.com/boothsun/p/8970952.html" target="_blank" rel="noopener">https://www.cnblogs.com/boothsun/p/8970952.html</a> 二叉、b、b+树<br><a href="https://www.cnblogs.com/dreamroute/p/8484457.html" target="_blank" rel="noopener">https://www.cnblogs.com/dreamroute/p/8484457.html</a> 倒排索引<br><a href="https://blog.csdn.net/CrankZ/article/details/80615789" target="_blank" rel="noopener">https://blog.csdn.net/CrankZ/article/details/80615789</a> 倒排索引</p>
 
       
     </div>
@@ -558,12 +550,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/Java总结/Java-Mysql索引原理/">Java-Mysql索引原理</a></p>
+  <p><span>本文标题:</span><a href="/Java-总结-参考文献.html">Java-总结 参考文献</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 刘浩 的个人博客">刘浩</a></p>
-  <p><span>发布时间:</span>2019年02月28日 - 16:19</p>
+  <p><span>发布时间:</span>2019年02月28日 - 15:30</p>
   <p><span>最后更新:</span>2019年05月13日 - 17:36</p>
-  <p><span>原始链接:</span><a href="/Java总结/Java-Mysql索引原理/" title="Java-Mysql索引原理">https://www.bestliuhao.club/Java总结/Java-Mysql索引原理/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.bestliuhao.club/Java总结/Java-Mysql索引原理/" aria-label="复制成功！"></i></span>
+  <p><span>原始链接:</span><a href="/Java-总结-参考文献.html" title="Java-总结 参考文献">https://www.bestliuhao.club/Java-总结-参考文献.html</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.bestliuhao.club/Java-总结-参考文献.html" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
 </div>
@@ -640,8 +632,8 @@ $(".fa-clipboard").click(function(){
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Java总结/Java-集合原理/" rel="next" title="Java-集合原理">
-                <i class="fa fa-chevron-left"></i> Java-集合原理
+              <a href="/Java-反射.html" rel="next" title="反射">
+                <i class="fa fa-chevron-left"></i> 反射
               </a>
             
           </div>
@@ -650,8 +642,8 @@ $(".fa-clipboard").click(function(){
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Java总结/Java-常用查找算法/" rel="prev" title="Java-常用查找算法">
-                Java-常用查找算法 <i class="fa fa-chevron-right"></i>
+              <a href="/Java-代理.html" rel="prev" title="Java-代理">
+                Java-代理 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -719,7 +711,7 @@ $(".fa-clipboard").click(function(){
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

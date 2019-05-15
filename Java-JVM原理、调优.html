@@ -103,18 +103,20 @@
 
 
 
-  <meta name="description" content="类型 位数 字节数 取值范围     byte 8 1 -2^7 ~ 2^7-1   short 16 2 -2^15 ~ 2^15-1   int 32 4 -2^31 ~ 2^31-1   long 64 8 -2^63 ~ 2^63-1   float 32 4 2^-149 ~ 2^128-1   double 64 8 2^-1074 ~ 2^1024-1   char 16 2">
+  <meta name="description" content="JVM内存结构由堆、栈、本地方法栈、方法区等部分组成  堆：主要有新生代空间（Young）和老年代空间（Old），其中Young空间，又被分为2个部    分和3个板块，分别是1个Egen区，和2个Survivor区 栈：线程私有，JVM为每个新创建的线程都分配一个栈，它的生命周期与线程相同。也就是说,对于一个Java程序来说，它的运行就是通过对栈的操作来完成的。每个方法被执行的时候都会同时创建一">
 <meta name="keywords" content="Java总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java-数据类型">
-<meta property="og:url" content="https://www.bestliuhao.club/Java总结/Java-数据类型/index.html">
+<meta property="og:title" content="Java-JVM原理、调优">
+<meta property="og:url" content="https://www.bestliuhao.club/Java-JVM原理、调优.html">
 <meta property="og:site_name" content="没有什么永垂不朽">
-<meta property="og:description" content="类型 位数 字节数 取值范围     byte 8 1 -2^7 ~ 2^7-1   short 16 2 -2^15 ~ 2^15-1   int 32 4 -2^31 ~ 2^31-1   long 64 8 -2^63 ~ 2^63-1   float 32 4 2^-149 ~ 2^128-1   double 64 8 2^-1074 ~ 2^1024-1   char 16 2">
+<meta property="og:description" content="JVM内存结构由堆、栈、本地方法栈、方法区等部分组成  堆：主要有新生代空间（Young）和老年代空间（Old），其中Young空间，又被分为2个部    分和3个板块，分别是1个Egen区，和2个Survivor区 栈：线程私有，JVM为每个新创建的线程都分配一个栈，它的生命周期与线程相同。也就是说,对于一个Java程序来说，它的运行就是通过对栈的操作来完成的。每个方法被执行的时候都会同时创建一">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://www.bestliuhao.club/Java-JVM原理、调优/jvm原理、调优.png">
 <meta property="og:updated_time" content="2019-05-13T09:36:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java-数据类型">
-<meta name="twitter:description" content="类型 位数 字节数 取值范围     byte 8 1 -2^7 ~ 2^7-1   short 16 2 -2^15 ~ 2^15-1   int 32 4 -2^31 ~ 2^31-1   long 64 8 -2^63 ~ 2^63-1   float 32 4 2^-149 ~ 2^128-1   double 64 8 2^-1074 ~ 2^1024-1   char 16 2">
+<meta name="twitter:title" content="Java-JVM原理、调优">
+<meta name="twitter:description" content="JVM内存结构由堆、栈、本地方法栈、方法区等部分组成  堆：主要有新生代空间（Young）和老年代空间（Old），其中Young空间，又被分为2个部    分和3个板块，分别是1个Egen区，和2个Survivor区 栈：线程私有，JVM为每个新创建的线程都分配一个栈，它的生命周期与线程相同。也就是说,对于一个Java程序来说，它的运行就是通过对栈的操作来完成的。每个方法被执行的时候都会同时创建一">
+<meta name="twitter:image" content="https://www.bestliuhao.club/Java-JVM原理、调优/jvm原理、调优.png">
 
 
 
@@ -123,7 +125,7 @@
 
 
 
-  <link rel="canonical" href="https://www.bestliuhao.club/Java总结/Java-数据类型/">
+  <link rel="canonical" href="https://www.bestliuhao.club/Java-JVM原理、调优.html">
 
 
 
@@ -133,7 +135,7 @@
   };
 </script>
 
-  <title>Java-数据类型 | 没有什么永垂不朽</title>
+  <title>Java-JVM原理、调优 | 没有什么永垂不朽</title>
   
 
 
@@ -382,7 +384,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.bestliuhao.club/Java总结/Java-数据类型/">
+    <link itemprop="mainEntityOfPage" href="https://www.bestliuhao.club/Java-JVM原理、调优.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘浩">
@@ -399,7 +401,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Java-数据类型
+          <h2 class="post-title" itemprop="name headline">Java-JVM原理、调优
 
               
             
@@ -425,7 +427,7 @@
                 
               
 
-              <time title="创建时间：2019-02-28 14:25:26" itemprop="dateCreated datePublished" datetime="2019-02-28T14:25:26+08:00">2019-02-28</time>
+              <time title="创建时间：2019-02-28 15:02:05" itemprop="dateCreated datePublished" datetime="2019-02-28T15:02:05+08:00">2019-02-28</time>
             
 
             
@@ -477,8 +479,8 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
             
-                <a href="/Java总结/Java-数据类型/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Java总结/Java-数据类型/" itemprop="commentCount"></span>
+                <a href="/Java-JVM原理、调优.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Java-JVM原理、调优.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -514,82 +516,19 @@
       
 
       
-        <table>
-<thead>
-<tr>
-<th style="text-align:center">类型</th>
-<th style="text-align:center">位数</th>
-<th style="text-align:center">字节数</th>
-<th style="text-align:center">取值范围</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">byte</td>
-<td style="text-align:center">8</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">-2^7 ~ 2^7-1</td>
-</tr>
-<tr>
-<td style="text-align:center">short</td>
-<td style="text-align:center">16</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">-2^15 ~ 2^15-1</td>
-</tr>
-<tr>
-<td style="text-align:center">int</td>
-<td style="text-align:center">32</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">-2^31 ~ 2^31-1</td>
-</tr>
-<tr>
-<td style="text-align:center">long</td>
-<td style="text-align:center">64</td>
-<td style="text-align:center">8</td>
-<td style="text-align:center">-2^63 ~ 2^63-1</td>
-</tr>
-<tr>
-<td style="text-align:center">float</td>
-<td style="text-align:center">32</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">2^-149 ~ 2^128-1</td>
-</tr>
-<tr>
-<td style="text-align:center">double</td>
-<td style="text-align:center">64</td>
-<td style="text-align:center">8</td>
-<td style="text-align:center">2^-1074 ~ 2^1024-1</td>
-</tr>
-<tr>
-<td style="text-align:center">char</td>
-<td style="text-align:center">16</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">0  ~  2^16-1</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>boolean:        没有固定大小根据虚拟机定义</p>
+        <p><img src="/Java-JVM原理、调优/jvm原理、调优.png" alt="JVM原理、调优" title="JVM原理、调优"><br>JVM内存结构由堆、栈、本地方法栈、方法区等部分组成</p>
+<ol>
+<li>堆：主要有新生代空间（Young）和老年代空间（Old），其中Young空间，又被分为2个部    分和3个板块，分别是1个Egen区，和2个Survivor区</li>
+<li>栈：线程私有，JVM为每个新创建的线程都分配一个栈，它的生命周期与线程相同。也就是说,对于一个Java程序来说，它的运行就是通过对栈的操作来完成的。每个方法被执行的时候都会同时创建一个栈帧（Stack Frame）用于存储局部变量表、操作栈、动态链接、方法出口等信息。每一个方法被调用直至执行完成的过程，就对应着一个栈帧在虚拟机栈中从入栈到出栈的过程，该过程具有先进后出的特性。<br>本地方法栈：用于支持native方法的执行，存储了每个native方法调用的状态</li>
+<li>方法区：存放了jvm初始化时加载器加载的类信息、静态变量、final类型的常量、属性和方法信息。（永久代和元空间都是方法区的一种实现，区别是，永久代使用的是JVM的堆内存空间，会内存溢出，而元空间使用的是物理内存，直接受到本机的物理内存限制。 ）</li>
+<li>程序计数器：程序计数器（Program Counter Register）是一块较小的内存空间，它的作用可以看做是当前线程所执行的字节码的行号指示器<blockquote>
+<p>方法区和堆是所有线程共享的内存区域；而java栈、本地方法栈和程序员计数器是运行是线程私有的内存区域。</p>
 </blockquote>
-<p><em>Bit(位)、byte、字节、汉字的关系</em></p>
-<pre><code>1 bit  = 1  二进制数据
-1 byte = 8  bit
-1 字母 = 1  byte = 8 bit
-1 汉字 = 2  byte = 16 bit
-</code></pre><ol>
-<li>bit：位<br> 一个二进制数据0或1，是1bit；  </li>
-<li>byte：字节<br>存储空间的基本计量单位，如：MySQL中定义 VARCHAR(45)  即是指 45个字节；<br>1 byte = 8 bit  </li>
-<li>一个英文字符占一个字节；<br> 1 字母 = 1 byte = 8 bit  </li>
-<li>一个汉字占2个字节；<br> 1 汉字 = 2 byte = 16 bit  </li>
-<li>标点符号  <ol>
-<li>汉字输入状态下，默认为全角输入方式；  </li>
-<li>英文输入状态下，默认为半角输入方式；  </li>
-<li>全角输入方式下，标点符号占2字节；  </li>
-<li>半角输入方式下，标点符号占1字节；<br>故：汉字输入状态下的字符，占2个字节 (但不排除，自己更改了默认设置)；  <pre><code>英文输入状态下的字符，占1个字节 (但不排除，自己更改了默认设置)；
-</code></pre></li>
-</ol>
 </li>
 </ol>
+<p>jconsole 使用：</p>
+<p>参考文献：</p>
+<p><a href="http://www.importnew.com/23792.html" target="_blank" rel="noopener">http://www.importnew.com/23792.html</a> </p>
 
       
     </div>
@@ -620,12 +559,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/Java总结/Java-数据类型/">Java-数据类型</a></p>
+  <p><span>本文标题:</span><a href="/Java-JVM原理、调优.html">Java-JVM原理、调优</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 刘浩 的个人博客">刘浩</a></p>
-  <p><span>发布时间:</span>2019年02月28日 - 14:25</p>
+  <p><span>发布时间:</span>2019年02月28日 - 15:02</p>
   <p><span>最后更新:</span>2019年05月13日 - 17:36</p>
-  <p><span>原始链接:</span><a href="/Java总结/Java-数据类型/" title="Java-数据类型">https://www.bestliuhao.club/Java总结/Java-数据类型/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.bestliuhao.club/Java总结/Java-数据类型/" aria-label="复制成功！"></i></span>
+  <p><span>原始链接:</span><a href="/Java-JVM原理、调优.html" title="Java-JVM原理、调优">https://www.bestliuhao.club/Java-JVM原理、调优.html</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.bestliuhao.club/Java-JVM原理、调优.html" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
 </div>
@@ -702,8 +641,8 @@ $(".fa-clipboard").click(function(){
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Java/Java-Bean-Validation完成后端数据校验/" rel="next" title="Java Bean Validation完成后端数据校验">
-                <i class="fa fa-chevron-left"></i> Java Bean Validation完成后端数据校验
+              <a href="/Java-类加载机制.html" rel="next" title="Java-类加载机制">
+                <i class="fa fa-chevron-left"></i> Java-类加载机制
               </a>
             
           </div>
@@ -712,8 +651,8 @@ $(".fa-clipboard").click(function(){
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Java总结/Java-类加载机制/" rel="prev" title="Java-类加载机制">
-                Java-类加载机制 <i class="fa fa-chevron-right"></i>
+              <a href="/gc垃圾回收机制.html" rel="prev" title="gc垃圾回收机制">
+                gc垃圾回收机制 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -781,7 +720,7 @@ $(".fa-clipboard").click(function(){
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
