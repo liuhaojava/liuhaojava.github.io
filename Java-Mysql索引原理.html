@@ -28,8 +28,8 @@
   
     
     
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
+  <script src="/blog/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/blog/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
 
 
 
@@ -53,21 +53,21 @@
 
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
 
-<link rel="stylesheet" href="/css/main.css?v=6.7.0">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=6.7.0">
+<link rel="stylesheet" href="/blog/css/main.css?v=6.7.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=6.7.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png?v=6.7.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=6.7.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon.ico?v=6.7.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=6.7.0" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon.ico?v=6.7.0">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=6.7.0" color="#222">
 
 
 
@@ -78,7 +78,7 @@
 <script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/',
+    root: '/blog/',
     scheme: 'Gemini',
     version: '6.7.0',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
@@ -107,28 +107,28 @@
 <meta name="keywords" content="Java总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java-Mysql索引原理">
-<meta property="og:url" content="https://www.bestliuhao.club/Java-Mysql索引原理.html">
+<meta property="og:url" content="https://liuhaojava.gitee.io/blog/Java-Mysql索引原理.html">
 <meta property="og:site_name" content="没有什么永垂不朽">
 <meta property="og:description" content="为了快速查询，很多时候，我们会建立不同的索引，满足需求，mysql主要索引引擎有MyISAM和InnoDB，两者都是使用B+Tree作为索引结构，两者的区别： 一是主索引的区别，InnoDB的数据文件本身就是索引文件。而MyISAM的索引和数据是分开的。 二是辅助索引的区别：InnoDB的辅助索引data域存储相应记录主键的值而不是地址。而MyISAM的辅助索引和主索引没有多大区别。查询过程如下：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://www.bestliuhao.club/Java-Mysql索引原理/Java-Mysql索引原理1.png">
-<meta property="og:image" content="https://www.bestliuhao.club/Java-Mysql索引原理/Java-Mysql索引原理2.png">
-<meta property="og:image" content="https://www.bestliuhao.club/Java-Mysql索引原理/Java-Mysql索引原理3.png">
-<meta property="og:image" content="https://www.bestliuhao.club/Java-Mysql索引原理/Java-Mysql索引原理4.png">
+<meta property="og:image" content="https://liuhaojava.gitee.io/blog/Java-Mysql索引原理/Java-Mysql索引原理1.png">
+<meta property="og:image" content="https://liuhaojava.gitee.io/blog/Java-Mysql索引原理/Java-Mysql索引原理2.png">
+<meta property="og:image" content="https://liuhaojava.gitee.io/blog/Java-Mysql索引原理/Java-Mysql索引原理3.png">
+<meta property="og:image" content="https://liuhaojava.gitee.io/blog/Java-Mysql索引原理/Java-Mysql索引原理4.png">
 <meta property="og:updated_time" content="2019-05-13T09:36:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java-Mysql索引原理">
 <meta name="twitter:description" content="为了快速查询，很多时候，我们会建立不同的索引，满足需求，mysql主要索引引擎有MyISAM和InnoDB，两者都是使用B+Tree作为索引结构，两者的区别： 一是主索引的区别，InnoDB的数据文件本身就是索引文件。而MyISAM的索引和数据是分开的。 二是辅助索引的区别：InnoDB的辅助索引data域存储相应记录主键的值而不是地址。而MyISAM的辅助索引和主索引没有多大区别。查询过程如下：">
-<meta name="twitter:image" content="https://www.bestliuhao.club/Java-Mysql索引原理/Java-Mysql索引原理1.png">
+<meta name="twitter:image" content="https://liuhaojava.gitee.io/blog/Java-Mysql索引原理/Java-Mysql索引原理1.png">
 
 
 
-  <link rel="alternate" href="/atom.xml" title="没有什么永垂不朽" type="application/atom+xml">
+  <link rel="alternate" href="/blog/atom.xml" title="没有什么永垂不朽" type="application/atom+xml">
 
 
 
 
-  <link rel="canonical" href="https://www.bestliuhao.club/Java-Mysql索引原理.html">
+  <link rel="canonical" href="https://liuhaojava.gitee.io/blog/Java-Mysql索引原理.html">
 
 
 
@@ -195,7 +195,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
+      <a href="/blog/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">没有什么永垂不朽</span>
         <span class="logo-line-after"><i></i></span>
@@ -238,7 +238,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/blog/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
   </li>
         
@@ -255,7 +255,7 @@
 
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/blog/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
 
   </li>
         
@@ -272,7 +272,7 @@
 
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/blog/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
 
   </li>
         
@@ -289,7 +289,7 @@
 
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a href="/blog/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
 
   </li>
         
@@ -306,7 +306,7 @@
 
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/blog/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
   </li>
 
@@ -387,12 +387,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.bestliuhao.club/Java-Mysql索引原理.html">
+    <link itemprop="mainEntityOfPage" href="https://liuhaojava.gitee.io/blog/blog/Java-Mysql索引原理.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘浩">
       <meta itemprop="description" content="刘浩的博客，一个小搬砖工的学习笔记.">
-      <meta itemprop="image" content="/images/user.jpg">
+      <meta itemprop="image" content="/blog/images/user.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -464,7 +464,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Java总结/" itemprop="url" rel="index"><span itemprop="name">Java总结</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/blog/categories/Java总结/" itemprop="url" rel="index"><span itemprop="name">Java总结</span></a></span>
 
                 
                 
@@ -482,8 +482,8 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
             
-                <a href="/Java-Mysql索引原理.html#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Java-Mysql索引原理.html" itemprop="commentCount"></span>
+                <a href="/blog/Java-Mysql索引原理.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/blog/Java-Mysql索引原理.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -519,7 +519,7 @@
       
 
       
-        <p>为了快速查询，很多时候，我们会建立不同的索引，满足需求，mysql主要索引引擎有MyISAM和InnoDB，两者都是使用B+Tree作为索引结构，两者的<br>区别： 一是主索引的区别，InnoDB的数据文件本身就是索引文件。而MyISAM的索引和数据是分开的。 二是辅助索引的区别：InnoDB的辅助索引data<br>域存储相应记录主键的值而不是地址。而MyISAM的辅助索引和主索引没有多大区别。<br><img src="/Java-Mysql索引原理/Java-Mysql索引原理1.png" alt=""><br><img src="/Java-Mysql索引原理/Java-Mysql索引原理2.png" alt=""><br><img src="/Java-Mysql索引原理/Java-Mysql索引原理3.png" alt=""><br>查询过程如下：<br><img src="/Java-Mysql索引原理/Java-Mysql索引原理4.png" alt=""><br>在上图中，如果要查找数据项29，那么首先会把磁盘块1由磁盘加载到内存，此时发生一次IO，在内存中用二分查找确定29在17和35之间，锁定磁盘块1<br>的P2指针，内存时间因为非常短（相比磁盘的IO）可以忽略不计，通过磁盘块1的P2指针的磁盘地址把磁盘块3由磁盘加载到内存，发生第二次IO，29在<br>26和30之间，锁定磁盘块3的P2指针，通过指针加载磁盘块8到内存，发生第三次IO，同时内存中做二分查找找到29，结束查询，总计三次IO。真实的情<br>况是，3层的b+树可以表示上百万的数据（h高度会影响数据量），如果上百万的数据查找只需要三次IO，性能提高将是巨大的，如果没有索引，每个数据<br>项都要发生一次IO，那么总共需要百万次的IO，显然成本非常非常高。<br>性能优化点：  </p>
+        <p>为了快速查询，很多时候，我们会建立不同的索引，满足需求，mysql主要索引引擎有MyISAM和InnoDB，两者都是使用B+Tree作为索引结构，两者的<br>区别： 一是主索引的区别，InnoDB的数据文件本身就是索引文件。而MyISAM的索引和数据是分开的。 二是辅助索引的区别：InnoDB的辅助索引data<br>域存储相应记录主键的值而不是地址。而MyISAM的辅助索引和主索引没有多大区别。<br><img src="/blog/Java-Mysql索引原理/Java-Mysql索引原理1.png" alt=""><br><img src="/blog/Java-Mysql索引原理/Java-Mysql索引原理2.png" alt=""><br><img src="/blog/Java-Mysql索引原理/Java-Mysql索引原理3.png" alt=""><br>查询过程如下：<br><img src="/blog/Java-Mysql索引原理/Java-Mysql索引原理4.png" alt=""><br>在上图中，如果要查找数据项29，那么首先会把磁盘块1由磁盘加载到内存，此时发生一次IO，在内存中用二分查找确定29在17和35之间，锁定磁盘块1<br>的P2指针，内存时间因为非常短（相比磁盘的IO）可以忽略不计，通过磁盘块1的P2指针的磁盘地址把磁盘块3由磁盘加载到内存，发生第二次IO，29在<br>26和30之间，锁定磁盘块3的P2指针，通过指针加载磁盘块8到内存，发生第三次IO，同时内存中做二分查找找到29，结束查询，总计三次IO。真实的情<br>况是，3层的b+树可以表示上百万的数据（h高度会影响数据量），如果上百万的数据查找只需要三次IO，性能提高将是巨大的，如果没有索引，每个数据<br>项都要发生一次IO，那么总共需要百万次的IO，显然成本非常非常高。<br>性能优化点：  </p>
 <ol>
 <li>索引建立</li>
 <li>sql中使用函数会导致索引失效</li>
@@ -558,12 +558,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/Java-Mysql索引原理.html">Java-Mysql索引原理</a></p>
+  <p><span>本文标题:</span><a href="/blog/Java-Mysql索引原理.html">Java-Mysql索引原理</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 刘浩 的个人博客">刘浩</a></p>
   <p><span>发布时间:</span>2019年02月28日 - 16:19</p>
   <p><span>最后更新:</span>2019年05月13日 - 17:36</p>
-  <p><span>原始链接:</span><a href="/Java-Mysql索引原理.html" title="Java-Mysql索引原理">https://www.bestliuhao.club/Java-Mysql索引原理.html</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.bestliuhao.club/Java-Mysql索引原理.html" aria-label="复制成功！"></i></span>
+  <p><span>原始链接:</span><a href="/blog/Java-Mysql索引原理.html" title="Java-Mysql索引原理">https://liuhaojava.gitee.io/blog/Java-Mysql索引原理.html</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://liuhaojava.gitee.io/blog/Java-Mysql索引原理.html" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
 </div>
@@ -601,14 +601,14 @@ $(".fa-clipboard").click(function(){
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/微信.png" alt="刘浩 微信支付">
+        <img id="wechat_qr" src="/blog/images/微信.png" alt="刘浩 微信支付">
         <p>微信支付</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/支付宝.jpg" alt="刘浩 支付宝">
+        <img id="alipay_qr" src="/blog/images/支付宝.jpg" alt="刘浩 支付宝">
         <p>支付宝</p>
       </div>
     
@@ -627,7 +627,7 @@ $(".fa-clipboard").click(function(){
       
         <div class="post-tags">
           
-            <a href="/tags/Java总结/" rel="tag"><i class="fa fa-tag"></i> Java总结</a>
+            <a href="/blog/tags/Java总结/" rel="tag"><i class="fa fa-tag"></i> Java总结</a>
           
         </div>
       
@@ -640,7 +640,7 @@ $(".fa-clipboard").click(function(){
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Java-集合原理.html" rel="next" title="Java-集合原理">
+              <a href="/blog/Java-集合原理.html" rel="next" title="Java-集合原理">
                 <i class="fa fa-chevron-left"></i> Java-集合原理
               </a>
             
@@ -650,7 +650,7 @@ $(".fa-clipboard").click(function(){
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Java-常用查找算法.html" rel="prev" title="Java-常用查找算法">
+              <a href="/blog/Java-常用查找算法.html" rel="prev" title="Java-常用查找算法">
                 Java-常用查找算法 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -706,7 +706,7 @@ $(".fa-clipboard").click(function(){
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/user.jpg" alt="刘浩">
+              <img class="site-author-image" itemprop="image" src="/blog/images/user.jpg" alt="刘浩">
             
               <p class="site-author-name" itemprop="name">刘浩</p>
               <p class="site-description motion-element" itemprop="description">刘浩的博客，一个小搬砖工的学习笔记.</p>
@@ -717,7 +717,7 @@ $(".fa-clipboard").click(function(){
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/archives/">
+                  <a href="/blog/archives/">
                 
                     <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">日志</span>
@@ -729,7 +729,7 @@ $(".fa-clipboard").click(function(){
                 
                 
                 <div class="site-state-item site-state-categories">
-                  <a href="/categories/index.html">
+                  <a href="/blog/categories/index.html">
                     
                     
                       
@@ -750,7 +750,7 @@ $(".fa-clipboard").click(function(){
                 
                 
                 <div class="site-state-item site-state-tags">
-                  <a href="/tags/index.html">
+                  <a href="/blog/tags/index.html">
                     
                     
                       
@@ -771,7 +771,7 @@ $(".fa-clipboard").click(function(){
 
           
             <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
+              <a href="/blog/atom.xml" rel="alternate">
                 <i class="fa fa-rss"></i>
                 RSS
               </a>
@@ -800,7 +800,7 @@ $(".fa-clipboard").click(function(){
                   
                     
                   
-                  <a href="/刘浩:liuhjavax@163.com" title="E-Mail &rarr; 刘浩:liuhjavax@163.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  <a href="/blog/刘浩:liuhjavax@163.com" title="E-Mail &rarr; 刘浩:liuhjavax@163.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -824,7 +824,7 @@ $(".fa-clipboard").click(function(){
               
               
               
-              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/blog/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
              </div>
           
 
@@ -967,45 +967,45 @@ $(".fa-clipboard").click(function(){
 
 
   
-  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+  <script src="/blog/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
-  
-
-
-  <script src="/js/src/utils.js?v=6.7.0"></script>
-
-  <script src="/js/src/motion.js?v=6.7.0"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/src/affix.js?v=6.7.0"></script>
-
-  <script src="/js/src/schemes/pisces.js?v=6.7.0"></script>
-
-
-
-
-  
-  <script src="/js/src/scrollspy.js?v=6.7.0"></script>
-<script src="/js/src/post-details.js?v=6.7.0"></script>
-
+  <script src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
 
   
 
 
-  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
+  <script src="/blog/js/src/utils.js?v=6.7.0"></script>
+
+  <script src="/blog/js/src/motion.js?v=6.7.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/blog/js/src/affix.js?v=6.7.0"></script>
+
+  <script src="/blog/js/src/schemes/pisces.js?v=6.7.0"></script>
+
+
+
+
+  
+  <script src="/blog/js/src/scrollspy.js?v=6.7.0"></script>
+<script src="/blog/js/src/post-details.js?v=6.7.0"></script>
+
+
+
+  
+
+
+  <script src="/blog/js/src/bootstrap.js?v=6.7.0"></script>
 
 
 
@@ -1057,7 +1057,7 @@ $(".fa-clipboard").click(function(){
     } else if (/json$/i.test(search_path)) {
       isXml = false;
     }
-    var path = "/" + search_path;
+    var path = "/blog/" + search_path;
     // monitor main search box;
 
     var onPopupClose = function (e) {
