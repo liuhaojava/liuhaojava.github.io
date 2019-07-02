@@ -2736,7 +2736,7 @@ SELECT *FROM table1 t1LEFT JOIN table2 t2 ON t2.id = t1.idLEFT JOIN table3 t3 ON
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {
